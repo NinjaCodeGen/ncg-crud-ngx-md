@@ -1,0 +1,61 @@
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span>NCG NGX Material Design</span>
+    <button id="sideBarToggleButton" md-icon-button (click)="sidenav.toggle()">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+    <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-sidenav-container fxFlex class="app-inner">
+    <md-sidenav #sidenav mode="side" id="sidebar-panel" class="sidebar-panel" [opened]="true">
+      <md-nav-list appAccordion class="navigation">
+        <md-list-item appAccordionLink *ngFor="let menuitem of menuItems.getAll()" group="{{ menuitem.state }}">
+          <a appAccordionToggle class="relative" md-ripple [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+            <md-icon>{{ menuitem.icon }}</md-icon>
+            <span>{{ menuitem.name | translate }}</span>
+            <span fxFlex></span>
+            <span class="menu-badge mat-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+          </a>
+          <a appAccordionToggle class="relative" md-ripple href="{{ menuitem.state }}" *ngIf="menuitem.type === 'extLink'">
+            <md-icon>{{ menuitem.icon }}</md-icon>
+            <span>{{ menuitem.name | translate }}</span>
+            <span fxFlex></span>
+            <span class="menu-badge mat-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+          </a>
+          <a appAccordionToggle class="relative" md-ripple href="{{ menuitem.state }}" target="_blank" *ngIf="menuitem.type === 'extTabLink'">
+            <md-icon>{{ menuitem.icon }}</md-icon>
+            <span>{{ menuitem.name | translate }}</span>
+            <span fxFlex></span>
+            <span class="menu-badge mat-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+          </a>
+          <a appAccordionToggle class="relative" md-ripple href="javascript:;" *ngIf="menuitem.type === 'sub'">
+            <md-icon>{{ menuitem.icon }}</md-icon>
+            <span>{{ menuitem.name | translate }}</span>
+            <span fxFlex></span>
+            <span class="menu-badge mat-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
+            <md-icon class="menu-caret">arrow_drop_down</md-icon>
+          </a>
+          <md-nav-list class="sub-menu" *ngIf="menuitem.type === 'sub'">
+            <md-list-item *ngFor="let childitem of menuitem.children" routerLinkActive="open">
+              <a [routerLink]="['/', menuitem.state, childitem.state ]" class="relative" md-ripple>{{ childitem.name | translate }}</a>
+            </md-list-item>
+          </md-nav-list>
+        </md-list-item>
+      </md-nav-list>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+    <footer>
+      <span>Generated with <a [href]="url" target="_blank">NinjaCodeGen</a> by DNA</span>
+    </footer>
+  </md-sidenav-container>
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+</div>
+<ncg-busyIndicator></ncg-busyIndicator>
+<ncg-notifier></ncg-notifier>
+<ncg-modal-dialog></ncg-modal-dialog>

@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "material2-start"
+  },
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": [
+      "assets",
+      "favicon.ico"
+    ],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "test": "test.ts",
+    "tsconfig": "tsconfig.app.json",
+    "testTsconfig": "tsconfig.spec.json",
+    "prefix": "app",
+    "styles": [
+      "../node_modules/@swimlane/ngx-datatable/release/index.css",
+      "../node_modules/@swimlane/ngx-datatable/release/themes/material.css",
+      "styles.css",
+      "theme.scss",
+      "assets/fonts/data-table/icons.css",
+      "assets/styles/app.scss"
+    ],
+    "scripts": [
+      "../node_modules/hammerjs/hammer.min.js"
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "dev": "environments/environment.ts",
+      "prod": "environments/environment.prod.ts"
+    }
+  }],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [{
+    "project": "src/tsconfig.app.json"
+  }, {
+    "project": "src/tsconfig.spec.json"
+  }],
+  "test": {
+    "karma": {}
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "properties": {
+    "id": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "label": "Id",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "id",
+        "validations": {
+          "required": {
+            "value": true
+          }
+        },
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "name": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Name",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "name",
+        "validations": {
+          "required": {
+            "value": true
+          }
+        },
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "type": "object",
+  "x-ncg": {
+    "foreignKeys": [],
+    "isSelected": true,
+    "label": "SomeItem"
+  }
+}

@@ -1,0 +1,69 @@
+<!--NcgOther-->
+    <div class="mb-1">
+      <button id="addButton" md-raised-button color="primary" class="btn btn-secondary" [routerLink]="['new']" [attr.aria-label]="Add">Add</button>
+    </div>
+    <br />
+    <parentFilterAndPaging #parentFilterAndPagingRef [paginationData]="paginationData" [query]="query" [filterType]="filterType" [fieldFilterModel]="fieldFilterModel" [filterValue]="filterValue" (onListClicked)="getList()" (onPageChanged)="pageChanged($event)"
+      (onUpdatingSort)="updateSort($event.value)" (onUpdatingFilter)="updateFilter($event)">
+    </parentFilterAndPaging>
+    <br />
+    <div class="mb-1">
+      <ngx-datatable 
+        *ngIf="listWithCount" class="material" 
+        [rows]="rows" 
+        [columnMode]="'force'" 
+        [headerHeight]="50" 
+        [footerHeight]="50" 
+        [rowHeight]="'auto'" 
+        [externalPaging]="true" 
+        [externalSorting]="true"
+        [count]="listWithCount.count" 
+        [offset]="paginationData.currentPage - 1"
+        [limit]="paginationData.maxSize" 
+        (page)='onPageChanged($event)'
+        (sort)="onSort($event)">
+        <ngx-datatable-column name="Actions">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <button id="editButton" md-icon-button md-button-sm (click)="edit(row)" [attr.aria-label]="edit"><md-icon>edit</md-icon></button>
+            <button id="deleteButton" md-icon-button md-button-sm (click)="delete(row.id)" [attr.aria-label]="delete"><md-icon>delete</md-icon></button>
+          </ng-template>
+        </ngx-datatable-column>
+        
+        <!--id-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.id['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--itemNotDisplayed-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.itemNotDisplayed['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--itemNotGenerated-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.itemNotGenerated['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--listNotDisplayed-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.listNotDisplayed['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--listNotGenerated-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.listNotGenerated['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--orderAThird-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.orderAThird['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--orderBSecond-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.orderBSecond['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--orderCFirst-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.orderCFirst['x-ncg'].label }}"></ngx-datatable-column>
+        
+        <!--withTitleDescDefaultMetaData-->
+        
+        <ngx-datatable-column name="{{ formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].label }}"></ngx-datatable-column>
+         
+      </ngx-datatable>
+    </div>

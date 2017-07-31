@@ -1,0 +1,330 @@
+{
+  "properties": {
+    "abbreviation": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Abbreviation",
+        "placeholder": "abbreviation",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "createdBy": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Created By",
+        "placeholder": "created by",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "createdDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Created Date",
+        "placeholder": "created date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "id": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Id",
+        "placeholder": "id",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "isActive": {
+      "type": "boolean",
+      "x-ncg": {
+        "label": "Is Active",
+        "placeholder": "is active",
+        "type": "boolean",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "key": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Key",
+        "placeholder": "key",
+        "type": "string",
+        "validations": {
+          "maxLength": {
+            "value": 100
+          },
+          "minLength": {
+            "value": 5
+          },
+          "required": {
+            "value": true
+          }
+        },
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Name",
+        "placeholder": "name",
+        "type": "string",
+        "validations": {
+          "pattern": {
+            "value": "[a-zA-Z0-9]+"
+          }
+        },
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        }
+      }
+    },
+    "order": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Order",
+        "placeholder": "order",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "parentID": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Parent Id",
+        "placeholder": "parent id",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "typeID": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Type Id",
+        "placeholder": "type id",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "uid": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Uid",
+        "placeholder": "uid",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "updatedBy": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Updated By",
+        "placeholder": "updated by",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "updatedDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Updated Date",
+        "placeholder": "updated date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "value": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Value",
+        "placeholder": "value",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    }
+  },
+  "type": "object",
+  "x-ncg": {
+    "isSelected": true,
+    "label": "Type Of Type",
+    "foreignKeys": []
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "default": "some default",
+  "description": "5. Advanced custom settings. (label, placeholder, tooltip, order, isGenerated, isDisplay)",
+  "properties": {
+    "id": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "label": "Id",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "id",
+        "validations": {},
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "withTitleDescDefaultMetaData": {
+      "default": "some default",
+      "description": "some description",
+      "title": "some title",
+      "type": "string",
+      "x-ncg": {
+        "label": "With Title Desc Default Meta Data",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "with title desc default meta data",
+        "validations": {},
+        "type": "string",
+        "default": "some default"
+      }
+    },
+    "orderCFirst": {
+      "type": "string",
+      "view": {
+        "item": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 1
+        },
+        "list": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 1
+        }
+      },
+      "x-ncg": {
+        "label": "Order C First",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "order c first",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "orderBSecond": {
+      "type": "string",
+      "view": {
+        "item": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 2
+        },
+        "list": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 2
+        }
+      },
+      "x-ncg": {
+        "label": "Order B Second",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "order b second",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "itemNotDisplayed": {
+      "type": "string",
+      "view": {
+        "item": {
+          "isDisplayed": false
+        }
+      },
+      "x-ncg": {
+        "label": "Item Not Displayed",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "item not displayed",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "itemNotGenerated": {
+      "type": "string",
+      "view": {
+        "item": {
+          "isGenerated": false
+        }
+      },
+      "x-ncg": {
+        "label": "Item Not Generated",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "item not generated",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "listNotDisplayed": {
+      "type": "string",
+      "view": {
+        "list": {
+          "isDisplayed": false
+        }
+      },
+      "x-ncg": {
+        "label": "List Not Displayed",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "list not displayed",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "listNotGenerated": {
+      "type": "string",
+      "view": {
+        "list": {
+          "isGenerated": false
+        }
+      },
+      "x-ncg": {
+        "label": "List Not Generated",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "list not generated",
+        "validations": {},
+        "type": "string"
+      }
+    },
+    "orderAThird": {
+      "type": "string",
+      "view": {
+        "item": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 3
+        },
+        "list": {
+          "isDisplayed": true,
+          "isGenerated": true,
+          "order": 3
+        }
+      },
+      "x-ncg": {
+        "label": "Order A Third",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 100
+          }
+        },
+        "placeholder": "order a third",
+        "validations": {},
+        "type": "string"
+      }
+    }
+  },
+  "title": "some title",
+  "type": "object",
+  "x-ncg": {
+    "order": 5,
+    "isSelected": true,
+    "label": "Tenant",
+    "foreignKeys": []
+  }
+}

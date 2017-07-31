@@ -1,0 +1,470 @@
+{
+  "properties": {
+    "afterDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "After Date",
+        "placeholder": "after date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "age": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Age",
+        "placeholder": "age",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "beforeDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Before Date",
+        "placeholder": "before date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "containsDPT": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Contains Dpt",
+        "placeholder": "contains dpt",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "createdBy": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Created By",
+        "placeholder": "created by",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "createdDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Created Date",
+        "placeholder": "created date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "creditCard": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Credit Card",
+        "placeholder": "credit card",
+        "type": "string",
+        "validations": {
+          "creditCardValidator": null
+        },
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        }
+      }
+    },
+    "date": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Date",
+        "placeholder": "date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "email": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Email",
+        "placeholder": "email",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "id": {
+      "format": "int32",
+      "type": "integer",
+      "uniqueItems": true,
+      "x-ncg": {
+        "format": "int32",
+        "label": "Id",
+        "placeholder": "id",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "integer": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Integer",
+        "placeholder": "integer",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "isActive": {
+      "type": "boolean",
+      "x-ncg": {
+        "label": "Is Active",
+        "placeholder": "is active",
+        "type": "boolean",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "phone": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Phone",
+        "placeholder": "phone",
+        "type": "string",
+        "validations": {
+          "maxLength": {
+            "value": 12
+          },
+          "minLength": {
+            "value": 6
+          },
+          "phoneFormatValidation": "US"
+        },
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        }
+      }
+    },
+    "startsWithDPT": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Starts With Dpt",
+        "placeholder": "starts with dpt",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "string": {
+      "default": "",
+      "type": "string",
+      "x-ncg": {
+        "label": "String",
+        "placeholder": "string",
+        "type": "string",
+        "validations": {
+          "maxLength": {
+            "value": 200
+          },
+          "minLength": {
+            "value": 5
+          }
+        },
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "default": ""
+      }
+    },
+    "uid": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Uid",
+        "placeholder": "uid",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "updatedBy": {
+      "format": "int32",
+      "type": "integer",
+      "x-ncg": {
+        "format": "int32",
+        "label": "Updated By",
+        "placeholder": "updated by",
+        "type": "integer",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "updatedDate": {
+      "format": "date-time",
+      "type": "string",
+      "x-ncg": {
+        "format": "date-time",
+        "label": "Updated Date",
+        "placeholder": "updated date",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "url": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Url",
+        "placeholder": "url",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    },
+    "zip": {
+      "type": "string",
+      "x-ncg": {
+        "label": "Zip",
+        "placeholder": "zip",
+        "type": "string",
+        "view": {
+          "item": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          },
+          "list": {
+            "isDisplayed": true,
+            "isGenerated": true,
+            "order": 1
+          }
+        },
+        "validations": {}
+      }
+    }
+  },
+  "type": "object",
+  "x-ncg": {
+    "isSelected": true,
+    "label": "Validation",
+    "foreignKeys": []
+  }
+}
