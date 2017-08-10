@@ -108,6 +108,62 @@ export class NcgValidationItemComponent extends BaseItemComponent<NcgValidation>
           this.validationService.generateValidators(this.formMetaData.properties.valRequiredField['x-ncg'].validations)
         )
       ] : null,
+      
+      someArray: this.formMetaData.properties.someArray ? [
+          this.formMetaData.properties.someArray['x-ncg'].defaultValue ? this.formMetaData.properties.someArray['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someArray['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someBoolean: this.formMetaData.properties.someBoolean ? [
+          this.formMetaData.properties.someBoolean['x-ncg'].defaultValue ? this.formMetaData.properties.someBoolean['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someBoolean['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someIntegerInt32: this.formMetaData.properties.someIntegerInt32 ? [
+          this.formMetaData.properties.someIntegerInt32['x-ncg'].defaultValue ? this.formMetaData.properties.someIntegerInt32['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someIntegerInt32['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someNumber: this.formMetaData.properties.someNumber ? [
+          this.formMetaData.properties.someNumber['x-ncg'].defaultValue ? this.formMetaData.properties.someNumber['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someNumber['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someNumberDouble: this.formMetaData.properties.someNumberDouble ? [
+          this.formMetaData.properties.someNumberDouble['x-ncg'].defaultValue ? this.formMetaData.properties.someNumberDouble['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someNumberDouble['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someString: this.formMetaData.properties.someString ? [
+          this.formMetaData.properties.someString['x-ncg'].defaultValue ? this.formMetaData.properties.someString['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someString['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someStringDateTime: this.formMetaData.properties.someStringDateTime ? [
+          this.formMetaData.properties.someStringDateTime['x-ncg'].defaultValue ? this.formMetaData.properties.someStringDateTime['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someStringDateTime['x-ncg'].validations)
+        )
+      ] : null,
+      
+      someStringUid: this.formMetaData.properties.someStringUid ? [
+          this.formMetaData.properties.someStringUid['x-ncg'].defaultValue ? this.formMetaData.properties.someStringUid['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.someStringUid['x-ncg'].validations)
+        )
+      ] : null,
     });
   }
 

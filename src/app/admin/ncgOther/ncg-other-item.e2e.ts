@@ -130,5 +130,89 @@ describe('Ncg Other Item', () => {
       }
     });
   
+    it('can see the pattern validation message for valEmailAddressPattern field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'pattern';
+      let fieldKey = 'valEmailAddressPattern';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the maximum validation message for valMin0Max100Value field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maximum';
+      let fieldKey = 'valMin0Max100Value';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the minimum validation message for valMin0Max100Value field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'minimum';
+      let fieldKey = 'valMin0Max100Value';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the maxLength validation message for valMin2Max8Length field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maxLength';
+      let fieldKey = 'valMin2Max8Length';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the minLength validation message for valMin2Max8Length field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'minLength';
+      let fieldKey = 'valMin2Max8Length';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for valRequiredField field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'valRequiredField';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
   });
 });

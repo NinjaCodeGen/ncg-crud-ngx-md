@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { IDefaultValidation } from './default-validation-interface';
 
+import { SomeItem } from './some-item';
 
 'use strict';
 

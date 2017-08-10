@@ -3,6 +3,7 @@
 'use strict';
 
 
+import { User } from './user';
 
 export interface ITypeOfType {
 

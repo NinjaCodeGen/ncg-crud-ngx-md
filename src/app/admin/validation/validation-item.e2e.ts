@@ -130,6 +130,160 @@ describe('Validation Item', () => {
       }
     });
   
+    it('can see the maxLength validation message for address field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maxLength';
+      let fieldKey = 'address';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the minLength validation message for address field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'minLength';
+      let fieldKey = 'address';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for address field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'address';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for age field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'age';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the maximum validation message for age field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maximum';
+      let fieldKey = 'age';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the minimum validation message for age field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'minimum';
+      let fieldKey = 'age';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the pattern validation message for emailAddress field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'pattern';
+      let fieldKey = 'emailAddress';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for emailAddress field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'emailAddress';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for gender field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'gender';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the maxLength validation message for name field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maxLength';
+      let fieldKey = 'name';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for name field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'name';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
     it('can see the maxLength validation message for phone field', () => {
       let valMsg = '';
       let valMsgXPath = '';
@@ -148,6 +302,20 @@ describe('Validation Item', () => {
       let valMsg = '';
       let valMsgXPath = '';
       let validationType = 'minLength';
+      let fieldKey = 'phone';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for phone field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
       let fieldKey = 'phone';
       listPO.goToAdd();
 
@@ -177,6 +345,20 @@ describe('Validation Item', () => {
       let valMsgXPath = '';
       let validationType = 'minLength';
       let fieldKey = 'string';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for reOrderLevel field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'reOrderLevel';
       listPO.goToAdd();
 
       itemPO.typeInInvalidData(fieldKey, validationType);

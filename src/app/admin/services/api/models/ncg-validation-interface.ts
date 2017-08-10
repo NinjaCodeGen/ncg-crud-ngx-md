@@ -3,6 +3,7 @@
 'use strict';
 
 
+import { SomeItem } from './some-item';
 
 export interface INcgValidation {
 

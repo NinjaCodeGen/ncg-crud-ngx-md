@@ -256,6 +256,48 @@ describe('User Item', () => {
 
     });
     
+    it('can see the maxLength validation message for key field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'maxLength';
+      let fieldKey = 'key';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the minLength validation message for key field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'minLength';
+      let fieldKey = 'key';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for key field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'key';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
     it('can see the maxLength validation message for name field', () => {
       let valMsg = '';
       let valMsgXPath = '';
@@ -274,6 +316,20 @@ describe('User Item', () => {
       let valMsg = '';
       let valMsgXPath = '';
       let validationType = 'required';
+      let fieldKey = 'name';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the pattern validation message for name field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'pattern';
       let fieldKey = 'name';
       listPO.goToAdd();
 

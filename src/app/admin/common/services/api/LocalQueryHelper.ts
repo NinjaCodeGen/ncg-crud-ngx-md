@@ -106,7 +106,30 @@ export class LocalQueryHelper {
             return (item[selectedProperties] && item[selectedProperties].toString() !== mainKeyWord);
           });
 
-        default: return list;
+        default: {
+          if (mainKeyWord !== '') {
+            const selectedItemIndex = [];
+
+            list.forEach((item, itemIndex) => {
+              for (const key in item) {
+                if (item.hasOwnProperty(key) && ((item[key].toString().indexOf(mainKeyWord.toLowerCase()) > -1) ||
+                  item[key].toString().toLowerCase() === mainKeyWord.toLowerCase())) {
+                  selectedItemIndex.push(itemIndex);
+                }
+              }
+            });
+
+            if (selectedItemIndex.length > 0) {
+              return list.filter((item, index) => {
+                return selectedItemIndex.indexOf(index) > -1;
+              });
+            } else {
+              return list;
+            }
+          } else {
+            return list;
+          }
+        }
       }
     }
   }

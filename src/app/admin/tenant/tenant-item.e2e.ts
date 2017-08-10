@@ -144,6 +144,20 @@ describe('Tenant Item', () => {
 
     });
     
+    it('can see the required validation message for id field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'id';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
     it('can see the required validation message for concurrencyStamp field', () => {
       let valMsg = '';
       let valMsgXPath = '';
@@ -205,6 +219,20 @@ describe('Tenant Item', () => {
       let valMsgXPath = '';
       let validationType = 'minLength';
       let fieldKey = 'issuerValue';
+      listPO.goToAdd();
+
+      itemPO.typeInInvalidData(fieldKey, validationType);
+      valMsgXPath = itemPO.getValMsgXPath(fieldKey);
+      valMsg = itemPO.getValMsg(fieldKey, validationType);
+      expect(element(by.xpath(valMsgXPath)).getText()).toBe(valMsg);
+
+    });
+    
+    it('can see the required validation message for name field', () => {
+      let valMsg = '';
+      let valMsgXPath = '';
+      let validationType = 'required';
+      let fieldKey = 'name';
       listPO.goToAdd();
 
       itemPO.typeInInvalidData(fieldKey, validationType);
