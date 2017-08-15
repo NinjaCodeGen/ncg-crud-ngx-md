@@ -8,3 +8,52 @@
 @import "scss/core";
 // @import "scss/material";
 // @import "scss/utilities/utilities";
+.sidebar-sample {
+  background-color: #414B56;
+  .mat-list-item {
+    border-bottom: 1px solid #3E5266;
+    line-height: 70px;
+    height: 70px;
+    text-align: center;
+    &:hover {
+      background-color: #3B434C;
+      button {
+        .mat-icon {
+          color: cornflowerblue;
+        }
+      }
+      .badge {
+        display: block;
+      }
+    }
+    .mat-list-item-content {
+      max-height: 70px !important;
+    }
+    button {
+      color: gray;
+      line-height: 25px;
+      height: 70px;
+      max-height: 70px;
+      text-align: center;
+      .mat-icon {
+        color: gray;
+        margin: 0;
+      }
+      span {
+        display: block;
+      }
+    }
+    .badge {
+      background-color: cornflowerblue;
+      border-radius: 4px;
+      color: white;
+      display: none;
+      line-height: 1;
+      position: absolute;
+      padding: 2px 5px;
+      right: 10px;
+      top: 8px;
+      text-align: center;
+    }
+  }
+}

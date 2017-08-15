@@ -12,6 +12,29 @@
   </md-toolbar>
   <md-sidenav-container fxFlex class="app-inner">
     <md-sidenav #sidenav mode="side" id="sidebar-panel" class="sidebar-panel" [opened]="true">
+      <md-nav-list class="sidebar-sample">
+        <md-list-item>
+          <div class="badge">2</div>
+          <button md-menu-item>
+            <md-icon>home</md-icon>
+            <span>Dashboard</span>
+          </button>
+        </md-list-item>
+        <md-list-item>
+          <div class="badge">20</div>
+          <button md-menu-item>          
+            <md-icon>assessment</md-icon>
+            <span>Sales</span>
+          </button>
+        </md-list-item>
+        <md-list-item>
+          <div class="badge">200</div>
+          <button md-menu-item>            
+            <md-icon>apps</md-icon>
+            <span>Transactions</span>
+          </button>
+        </md-list-item>
+      </md-nav-list>
       <md-nav-list appAccordion class="navigation">
         <md-list-item appAccordionLink *ngFor="let menuitem of menuItems.getAll()" group="{{ menuitem.state }}">
           <a appAccordionToggle class="relative" md-ripple [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
