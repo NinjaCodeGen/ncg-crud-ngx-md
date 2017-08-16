@@ -1,51 +1,65 @@
 
 <div fxLayout="row" fxLayoutAlign="center start">
-  <div fxFlex="30">
-    <md-select fxFlex="80" id="fieldSelect" [(ngModel)]="filterValue.filterField" [ngModelOptions]="{standalone: true}">
-      <md-option *ngFor="let opt of fieldFilterModel" [value]="opt.value">{{ opt.display }}</md-option>
-    </md-select>
+  <div fxFlex="80">
+    <md-input-container style="width: 100%">
+      <input id="searchInput" mdInput [(ngModel)]="filterKeyword" placeholder="Search ..." />
+    </md-input-container>
   </div>
-  <div fxFlex="30">
-    <md-select fxFlex="80" id="typeSelect" [(ngModel)]="filterValue.filterType" [ngModelOptions]="{standalone: true}">
-      <md-option *ngFor="let opt of filterType" [value]="opt.value">{{ opt.display }}</md-option>
-    </md-select>
-  </div>
-  <div fxFlex>
-    <input-debounce fxFlex="80" id="searchInput" [delay]="800" placeholder="Search..." (value)="updateFilter($event)"></input-debounce>
+  <div fxFlex fxLayoutAlign="center center">
+    <button id="getButton" md-raised-button color="primary" class="btn btn-secondary" (click)="updateFilter()" [attr.aria-label]="Search">Search</button>
   </div>
 </div>
 
-<div>
-  <ng-content select="[tableToInject]"></ng-content>
+<br />
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <button md-button color="primary" class="btn btn-secondary" [attr.aria-label]="ShowAdvanced" (click)="isShowAdvancedFilters = !isShowAdvancedFilters"> {{ isShowAdvancedFilters ? "Hide Advanced Filters" : "Show Advanced Filters" }}</button>
 </div>
 
-<div fxLayout="column">
-  <div>
-    <md-input-container style="width: 100%">
-      <input mdInput [(ngModel)]="query.filter" placeholder="filter string" />
-    </md-input-container>
+<br />
+
+<div *ngIf="isShowAdvancedFilters">
+  <div fxLayout="row" fxLayoutAlign="center start">
+    <div fxFlex="50">
+      <md-select fxFlex="90" id="fieldSelect" [(ngModel)]="filterValue.filterField" [ngModelOptions]="{standalone: true}">
+        <md-option *ngFor="let opt of fieldFilterModel" [value]="opt.value">{{ opt.display }}</md-option>
+      </md-select>
+    </div>
+    <div fxFlex="50">
+      <md-select fxFlex="90" id="typeSelect" [(ngModel)]="filterValue.filterType" [ngModelOptions]="{standalone: true}">
+        <md-option *ngFor="let opt of filterType" [value]="opt.value">{{ opt.display }}</md-option>
+      </md-select>
+    </div>
   </div>
 
   <div>
-    <md-input-container style="width: 100%">
-      <input mdInput [(ngModel)]="query.orderBy" placeholder="orderBy" class="form-control" />
-    </md-input-container>
+    <ng-content select="[tableToInject]"></ng-content>
   </div>
 
-  <div>
-    <md-input-container style="width: 100%">
-      <input mdInput id="recordsPerPageInput" [(ngModel)]="query.top" placeholder="top" type="number" class="form-control" />
-    </md-input-container>
-  </div>
+  <div fxLayout="column">
+    <div>
+      <md-input-container style="width: 100%">
+        <input mdInput [(ngModel)]="query.filter" placeholder="filter string" />
+      </md-input-container>
+    </div>
 
-  <div>
-    <md-input-container style="width: 100%">
-      <input mdInput [(ngModel)]="query.skip" placeholder="skip" type="number" class="form-control" />
-    </md-input-container>
-  </div>
+    <div>
+      <md-input-container style="width: 100%">
+        <input mdInput [(ngModel)]="query.orderBy" placeholder="orderBy" class="form-control" />
+      </md-input-container>
+    </div>
 
-  <div>
-    <button id="getButton" md-raised-button color="primary" class="btn btn-secondary" (click)="getList()" [attr.aria-label]="Search">Search</button>
+    <div>
+      <md-input-container style="width: 100%">
+        <input mdInput id="recordsPerPageInput" [(ngModel)]="query.top" placeholder="top" type="number" class="form-control" />
+      </md-input-container>
+    </div>
+
+    <div>
+      <md-input-container style="width: 100%">
+        <input mdInput [(ngModel)]="query.skip" placeholder="skip" type="number" class="form-control" />
+      </md-input-container>
+    </div>
   </div>
 </div>
 

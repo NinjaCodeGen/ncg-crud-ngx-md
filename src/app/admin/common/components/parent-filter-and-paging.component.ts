@@ -39,6 +39,8 @@ export class ParentFilterAndPagingComponent {
   @Output() onUpdatingSort = new EventEmitter();
   @Output() onPageChanged = new EventEmitter();
 
+  filterKeyword = '';
+
   constructor(private router: Router) { }
 
   getList() {
@@ -49,8 +51,8 @@ export class ParentFilterAndPagingComponent {
     this.onUpdatingSort.next(fieldName);
   }
 
-  updateFilter(filter) {
-    this.onUpdatingFilter.next(filter);
+  updateFilter() {
+    this.onUpdatingFilter.next(this.filterKeyword);
   }
 
   protected populateComponentDataAsync() { };

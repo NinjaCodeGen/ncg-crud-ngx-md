@@ -26,6 +26,7 @@ import * as moment from 'moment';
 
 export class ValidationItemComponent extends BaseItemComponent<Validation> {
 
+  tenantList: any = null;
 
   @Input() myForm: FormGroup;
 
@@ -85,6 +86,13 @@ export class ValidationItemComponent extends BaseItemComponent<Validation> {
           this.formMetaData.properties.afterDate['x-ncg'].defaultValue ? this.formMetaData.properties.afterDate['x-ncg'].defaultValue : null,
           Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.afterDate['x-ncg'].validations)
+        )
+      ] : null,
+      
+      address: this.formMetaData.properties.address ? [
+          this.formMetaData.properties.address['x-ncg'].defaultValue ? this.formMetaData.properties.address['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.address['x-ncg'].validations)
         )
       ] : null,
       
@@ -151,10 +159,38 @@ export class ValidationItemComponent extends BaseItemComponent<Validation> {
         )
       ] : null,
       
+      emailAddress: this.formMetaData.properties.emailAddress ? [
+          this.formMetaData.properties.emailAddress['x-ncg'].defaultValue ? this.formMetaData.properties.emailAddress['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.emailAddress['x-ncg'].validations)
+        )
+      ] : null,
+      
+      gender: this.formMetaData.properties.gender ? [
+          this.formMetaData.properties.gender['x-ncg'].defaultValue ? this.formMetaData.properties.gender['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.gender['x-ncg'].validations)
+        )
+      ] : null,
+      
       isActive: this.formMetaData.properties.isActive ? [
           this.formMetaData.properties.isActive['x-ncg'].defaultValue ? this.formMetaData.properties.isActive['x-ncg'].defaultValue : null,
           Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.isActive['x-ncg'].validations)
+        )
+      ] : null,
+      
+      name: this.formMetaData.properties.name ? [
+          this.formMetaData.properties.name['x-ncg'].defaultValue ? this.formMetaData.properties.name['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.name['x-ncg'].validations)
+        )
+      ] : null,
+      
+      password: this.formMetaData.properties.password ? [
+          this.formMetaData.properties.password['x-ncg'].defaultValue ? this.formMetaData.properties.password['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.password['x-ncg'].validations)
         )
       ] : null,
       
@@ -176,6 +212,34 @@ export class ValidationItemComponent extends BaseItemComponent<Validation> {
           this.formMetaData.properties.string['x-ncg'].defaultValue ? this.formMetaData.properties.string['x-ncg'].defaultValue : null,
           Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.string['x-ncg'].validations)
+        )
+      ] : null,
+      
+      reOrderLevel: this.formMetaData.properties.reOrderLevel ? [
+          this.formMetaData.properties.reOrderLevel['x-ncg'].defaultValue ? this.formMetaData.properties.reOrderLevel['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.reOrderLevel['x-ncg'].validations)
+        )
+      ] : null,
+      
+      tenant: this.formMetaData.properties.tenant ? [
+          this.formMetaData.properties.tenant['x-ncg'].defaultValue ? this.formMetaData.properties.tenant['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.tenant['x-ncg'].validations)
+        )
+      ] : null,
+      
+      tenantId: this.formMetaData.properties.tenantId ? [
+          this.formMetaData.properties.tenantId['x-ncg'].defaultValue ? this.formMetaData.properties.tenantId['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.tenantId['x-ncg'].validations)
+        )
+      ] : null,
+      
+      testString: this.formMetaData.properties.testString ? [
+          this.formMetaData.properties.testString['x-ncg'].defaultValue ? this.formMetaData.properties.testString['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.testString['x-ncg'].validations)
         )
       ] : null,
       
@@ -220,5 +284,18 @@ export class ValidationItemComponent extends BaseItemComponent<Validation> {
   }
 
   protected populateComponentDataAsync() {
+    this.populateTenantData();
   }
+    
+  // private methods populateTenantData
+  private populateTenantData() {
+   this.datacontextService.TenantApi
+     .get()
+     .subscribe((tenantlistWithCount) => {
+        // TODO: this.tenantIsLoading = true;
+        this.tenantList = tenantlistWithCount.list;
+      },
+      (error) => { this.errorMessage = <any>error; });
+  }
+  
 }

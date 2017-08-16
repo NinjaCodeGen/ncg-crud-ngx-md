@@ -3,6 +3,7 @@
 'use strict';
 
 
+import { Tenant } from './tenant';
 
 export interface IValidation {
 

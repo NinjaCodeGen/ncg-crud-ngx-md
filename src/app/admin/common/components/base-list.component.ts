@@ -1,10 +1,10 @@
 // angular
 import { OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 
 // core services
-import { EntityService, ModalDialogService, BusyIndicatorService, NotifierService } from '../../../core';
+import { BusyIndicatorService, EntityService, ModalDialogService, NotifierService } from '../../../core';
 
 // admin services
 import { BaseApi, IListWithCount, IQuery } from './../services';
@@ -121,7 +121,6 @@ export abstract class BaseListComponent<T> implements OnInit {
   public ngOnInit() {
     this.populateComponentDataAsync();
     this.getList();
-    console.log(`ngOnInit ${this.componentName} component`);
   }
 
   public delete(id: number) {

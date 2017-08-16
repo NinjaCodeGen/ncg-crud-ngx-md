@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { INcgValidation } from './ncg-validation-interface';
 
+import { SomeItem } from './some-item';
 
 'use strict';
 

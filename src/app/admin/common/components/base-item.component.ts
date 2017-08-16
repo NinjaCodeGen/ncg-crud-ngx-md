@@ -1,21 +1,21 @@
 // angular
-import { OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { FormGroup, FormBuilder } from '@angular/forms'
-import { Router, ActivatedRoute } from '@angular/router';
+import { OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms'
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+
 // 3rd party
 import * as changeCase from 'change-case';
 import * as moment from 'moment';
 
 // core services
-import { EntityService, ModalDialogService, BusyIndicatorService, NotifierService } from '../../../core';
+import { BusyIndicatorService, EntityService, ModalDialogService, NotifierService } from '../../../core';
 
 // admin services
 import { BaseApi, RestoreService, ValidationService } from './../services';
 
 export abstract class BaseItemComponent<T> implements OnInit {
-  public appName: string;
   public componentName: string;
   public customValidationMessages = {};
   public errorMessage: string;
@@ -30,7 +30,6 @@ export abstract class BaseItemComponent<T> implements OnInit {
   public momentFunction: any;
   public myForm: FormGroup;
   public isSubmitAttempted: boolean = false;
-  public viewName: string;
 
   constructor(protected titleService: Title,
     protected baseApi: BaseApi<T>,
@@ -54,12 +53,7 @@ export abstract class BaseItemComponent<T> implements OnInit {
   protected abstract customValidate();
 
   public ngOnInit() {
-    console.log(`ngOnInit ${this.componentName} component`);
-
     this.setItemId();
-
-    this.titleService.setTitle(`${this.appName} - ${this.viewName} - ${this.id}`);
-
     this.populateComponentDataAsync();
 
     if (this.id === null || this.id === undefined) {

@@ -136,6 +136,34 @@ export class NcgOtherItemComponent extends BaseItemComponent<NcgOther> {
           this.validationService.generateValidators(this.formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].validations)
         )
       ] : null,
+      
+      valEmailAddressPattern: this.formMetaData.properties.valEmailAddressPattern ? [
+          this.formMetaData.properties.valEmailAddressPattern['x-ncg'].defaultValue ? this.formMetaData.properties.valEmailAddressPattern['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.valEmailAddressPattern['x-ncg'].validations)
+        )
+      ] : null,
+      
+      valMin0Max100Value: this.formMetaData.properties.valMin0Max100Value ? [
+          this.formMetaData.properties.valMin0Max100Value['x-ncg'].defaultValue ? this.formMetaData.properties.valMin0Max100Value['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.valMin0Max100Value['x-ncg'].validations)
+        )
+      ] : null,
+      
+      valMin2Max8Length: this.formMetaData.properties.valMin2Max8Length ? [
+          this.formMetaData.properties.valMin2Max8Length['x-ncg'].defaultValue ? this.formMetaData.properties.valMin2Max8Length['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.valMin2Max8Length['x-ncg'].validations)
+        )
+      ] : null,
+      
+      valRequiredField: this.formMetaData.properties.valRequiredField ? [
+          this.formMetaData.properties.valRequiredField['x-ncg'].defaultValue ? this.formMetaData.properties.valRequiredField['x-ncg'].defaultValue : null,
+          Validators.compose(
+          this.validationService.generateValidators(this.formMetaData.properties.valRequiredField['x-ncg'].validations)
+        )
+      ] : null,
     });
   }
 
