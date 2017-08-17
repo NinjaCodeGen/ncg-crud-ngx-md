@@ -48,10 +48,10 @@ export class NcgValidationListComponent extends BaseListComponent<NcgValidation>
 
   public generateFilterModel() {
     let filterModel = [];
-    if (this.formMetaData && this.formMetaData.properties) {
-      for (let key in this.formMetaData.properties) {
-        if (this.formMetaData.properties.hasOwnProperty(key)) {
-          let element = this.formMetaData.properties[key];
+    if (this.formMetaData && this.props) {
+      for (let key in this.props) {
+        if (this.props.hasOwnProperty(key)) {
+          let element = this.props[key];
 
           if (element.type && element['x-ncg']) {
             filterModel.push({

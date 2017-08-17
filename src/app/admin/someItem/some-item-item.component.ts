@@ -74,45 +74,45 @@ export class SomeItemItemComponent extends BaseItemComponent<SomeItem> {
   private addFormValidation() {
     this.myForm = this.formBuilder.group({
       
-      id: this.formMetaData.properties.id ? [
-          this.formMetaData.properties.id['x-ncg'].defaultValue ? this.formMetaData.properties.id['x-ncg'].defaultValue : null,
+      id: this.props.id ? [
+          this.props.id['x-ncg'].defaultValue ? this.props.id['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.id['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.id['x-ncg'].validations)
         )
       ] : null,
       
-      name: this.formMetaData.properties.name ? [
-          this.formMetaData.properties.name['x-ncg'].defaultValue ? this.formMetaData.properties.name['x-ncg'].defaultValue : null,
+      name: this.props.name ? [
+          this.props.name['x-ncg'].defaultValue ? this.props.name['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.name['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.name['x-ncg'].validations)
         )
       ] : null,
       
-      valEmailAddressPattern: this.formMetaData.properties.valEmailAddressPattern ? [
-          this.formMetaData.properties.valEmailAddressPattern['x-ncg'].defaultValue ? this.formMetaData.properties.valEmailAddressPattern['x-ncg'].defaultValue : null,
+      valEmailAddressPattern: this.props.valEmailAddressPattern ? [
+          this.props.valEmailAddressPattern['x-ncg'].defaultValue ? this.props.valEmailAddressPattern['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.valEmailAddressPattern['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.valEmailAddressPattern['x-ncg'].validations)
         )
       ] : null,
       
-      valMin0Max100Value: this.formMetaData.properties.valMin0Max100Value ? [
-          this.formMetaData.properties.valMin0Max100Value['x-ncg'].defaultValue ? this.formMetaData.properties.valMin0Max100Value['x-ncg'].defaultValue : null,
+      valMin0Max100Value: this.props.valMin0Max100Value ? [
+          this.props.valMin0Max100Value['x-ncg'].defaultValue ? this.props.valMin0Max100Value['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.valMin0Max100Value['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.valMin0Max100Value['x-ncg'].validations)
         )
       ] : null,
       
-      valMin2Max8Length: this.formMetaData.properties.valMin2Max8Length ? [
-          this.formMetaData.properties.valMin2Max8Length['x-ncg'].defaultValue ? this.formMetaData.properties.valMin2Max8Length['x-ncg'].defaultValue : null,
+      valMin2Max8Length: this.props.valMin2Max8Length ? [
+          this.props.valMin2Max8Length['x-ncg'].defaultValue ? this.props.valMin2Max8Length['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.valMin2Max8Length['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.valMin2Max8Length['x-ncg'].validations)
         )
       ] : null,
       
-      valRequiredField: this.formMetaData.properties.valRequiredField ? [
-          this.formMetaData.properties.valRequiredField['x-ncg'].defaultValue ? this.formMetaData.properties.valRequiredField['x-ncg'].defaultValue : null,
+      valRequiredField: this.props.valRequiredField ? [
+          this.props.valRequiredField['x-ncg'].defaultValue ? this.props.valRequiredField['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.valRequiredField['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.valRequiredField['x-ncg'].validations)
         )
       ] : null,
     });

@@ -21,6 +21,7 @@ export abstract class BaseItemComponent<T> implements OnInit {
   public errorMessage: string;
   public formErrors = {};
   public formMetaData: any = {};
+  public props: any;
   public guidKey: string;
   public id: number = null;
   public isItemEdited: boolean;
@@ -39,7 +40,7 @@ export abstract class BaseItemComponent<T> implements OnInit {
     protected notifierService: NotifierService,
     protected formBuilder: FormBuilder,
     protected location: Location,
-    protected restoreService: RestoreService<T>,
+    // protected restoreService: RestoreService<T>,
     protected activatedRoute: ActivatedRoute,
     protected router: Router,
     protected validationService: ValidationService
@@ -71,11 +72,12 @@ export abstract class BaseItemComponent<T> implements OnInit {
 
     this.baseApi.getById(this.id)
       .subscribe((item) => {
+        this.onItemRetrieved(item);
         this.busyIndicatorService.hide();
         this.isLoading = false;
         this.convertDateStringToDate(item);
-        this.restoreService.set(item);
-        this.item = this.restoreService.get();
+        // this.restoreService.set(item);
+        // this.item = this.restoreService.get();
         this.buildForm();
       }, (error) => {
         this.busyIndicatorService.hide();
@@ -84,12 +86,37 @@ export abstract class BaseItemComponent<T> implements OnInit {
       });
   }
 
+  public onItemRetrieved(item: T) {
+       if (this.myForm) {
+            this.myForm.reset();
+        }
+        this.item = item;
+
+        if (this.id === null || this.id === undefined) {
+            this.titleService.setTitle('Add');
+        } else {
+          this.titleService.setTitle(`Edit: #${this.id}`);;
+        }
+
+        this.patchValues(this.item);
+
+        // // Update the data on the form
+        // this.myForm.patchValue({
+        //     productName: this.item.,
+        //     productCode: this.item.productCode,
+        //     starRating: this.item.starRating,
+        //     description: this.item.description
+        // });
+     
+  }
+
+  abstract patchValues(T);
+
   public populateDataForNewItem() {
     this.item = <T>{};
     this.item[this.baseApi.keyName] = this.baseApi.getNewId();
-    this.item[this.guidKey] = this.generateGuid();
     this.buildForm();
-    this.restoreService.set(this.item);
+    // this.restoreService.set(this.item);
   }
 
   public goBack() {
@@ -101,12 +128,14 @@ export abstract class BaseItemComponent<T> implements OnInit {
   }
 
   public onCancel() {
-    this.item = this.restoreService.restoreItem();
+    this.myForm.reset();
+    // this.item = this.restoreService.restoreItem();
     this.goBack();
   }
 
   public onReset() {
-    this.item = this.restoreService.restoreItem();
+    this.myForm.reset();
+    // this.item = this.restoreService.restoreItem();
   }
 
   public onDelete() {
@@ -131,12 +160,12 @@ export abstract class BaseItemComponent<T> implements OnInit {
     if (!this.myForm) { return; }
     const form = this.myForm;
 
-    for (const fieldKey in this.formMetaData.properties) {
-      if (this.formMetaData.properties.hasOwnProperty(fieldKey)) {
+    for (const fieldKey in this.props) {
+      if (this.props.hasOwnProperty(fieldKey)) {
         const control = form.get(fieldKey);
 
         // clear previous error message
-        this.formMetaData.properties[fieldKey]['x-ncg'].errors = [];
+        this.props[fieldKey]['x-ncg'].errors = [];
 
         if (control && control.dirty && !control.valid) {
           for (const errorKey in control.errors) {
@@ -152,15 +181,15 @@ export abstract class BaseItemComponent<T> implements OnInit {
   }
 
   public normalizeFormMetaData() {
-    for (const fieldKey in this.formMetaData.properties) {
-      if (this.formMetaData.properties.hasOwnProperty(fieldKey)) {
+    for (const fieldKey in this.props) {
+      if (this.props.hasOwnProperty(fieldKey)) {
         // create default label
-        if (this.formMetaData.properties[fieldKey]['x-ncg'].label === undefined) {
-          this.formMetaData.properties[fieldKey]['x-ncg'].label = changeCase.titleCase(fieldKey);
+        if (this.props[fieldKey]['x-ncg'].label === undefined) {
+          this.props[fieldKey]['x-ncg'].label = changeCase.titleCase(fieldKey);
         }
         // create default placeholder
-        if (this.formMetaData.properties[fieldKey]['x-ncg'].placeholder === undefined) {
-          this.formMetaData.properties[fieldKey]['x-ncg'].placeholder = changeCase.lowerCase(changeCase.titleCase(fieldKey), null);
+        if (this.props[fieldKey]['x-ncg'].placeholder === undefined) {
+          this.props[fieldKey]['x-ncg'].placeholder = changeCase.lowerCase(changeCase.titleCase(fieldKey), null);
         }
       }
     }
@@ -215,14 +244,6 @@ export abstract class BaseItemComponent<T> implements OnInit {
     }
   }
 
-  private generateGuid() {
-    function s4() {
-      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-    }
-
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-      s4() + '-' + s4() + s4() + s4();
-  }
 }
 
 /* NinjaCodeGen.com by DNAfor.NET */

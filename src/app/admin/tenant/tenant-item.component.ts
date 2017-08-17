@@ -74,45 +74,45 @@ export class TenantItemComponent extends BaseItemComponent<Tenant> {
   private addFormValidation() {
     this.myForm = this.formBuilder.group({
       
-      id: this.formMetaData.properties.id ? [
-          this.formMetaData.properties.id['x-ncg'].defaultValue ? this.formMetaData.properties.id['x-ncg'].defaultValue : null,
+      id: this.props.id ? [
+          this.props.id['x-ncg'].defaultValue ? this.props.id['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.id['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.id['x-ncg'].validations)
         )
       ] : null,
       
-      concurrencyStamp: this.formMetaData.properties.concurrencyStamp ? [
-          this.formMetaData.properties.concurrencyStamp['x-ncg'].defaultValue ? this.formMetaData.properties.concurrencyStamp['x-ncg'].defaultValue : null,
+      concurrencyStamp: this.props.concurrencyStamp ? [
+          this.props.concurrencyStamp['x-ncg'].defaultValue ? this.props.concurrencyStamp['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.concurrencyStamp['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.concurrencyStamp['x-ncg'].validations)
         )
       ] : null,
       
-      created: this.formMetaData.properties.created ? [
-          this.formMetaData.properties.created['x-ncg'].defaultValue ? this.formMetaData.properties.created['x-ncg'].defaultValue : null,
+      created: this.props.created ? [
+          this.props.created['x-ncg'].defaultValue ? this.props.created['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.created['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.created['x-ncg'].validations)
         )
       ] : null,
       
-      issuerValue: this.formMetaData.properties.issuerValue ? [
-          this.formMetaData.properties.issuerValue['x-ncg'].defaultValue ? this.formMetaData.properties.issuerValue['x-ncg'].defaultValue : null,
+      issuerValue: this.props.issuerValue ? [
+          this.props.issuerValue['x-ncg'].defaultValue ? this.props.issuerValue['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.issuerValue['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.issuerValue['x-ncg'].validations)
         )
       ] : null,
       
-      name: this.formMetaData.properties.name ? [
-          this.formMetaData.properties.name['x-ncg'].defaultValue ? this.formMetaData.properties.name['x-ncg'].defaultValue : null,
+      name: this.props.name ? [
+          this.props.name['x-ncg'].defaultValue ? this.props.name['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.name['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.name['x-ncg'].validations)
         )
       ] : null,
       
-      users: this.formMetaData.properties.users ? [
-          this.formMetaData.properties.users['x-ncg'].defaultValue ? this.formMetaData.properties.users['x-ncg'].defaultValue : null,
+      users: this.props.users ? [
+          this.props.users['x-ncg'].defaultValue ? this.props.users['x-ncg'].defaultValue : null,
           Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.users['x-ncg'].validations)
+          this.validationService.generateValidators(this.props.users['x-ncg'].validations)
         )
       ] : null,
     });

@@ -77,6 +77,8 @@ export abstract class BaseListComponent<T> implements OnInit {
   public searchValue: string = '';
   public selectedFilterField: string = null;
   public selectedFilterType: string = null;
+  public formMetaData: any = null;
+  public props: any = null;
 
   public filterValue = {
     filterField: '',
