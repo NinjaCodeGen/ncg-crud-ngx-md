@@ -24,7 +24,7 @@ Let's add *Selected Us*er functionality and show the selected user details in ou
     <md-tab label="Users">
       <md-nav-list>
         <md-list-item *ngFor="let user of users" (click)="selectedUser = user">
-          <md-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></md-icon>
+          <mat-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></mat-icon>
           <span>{{user.name}}</span>
         </md-list-item>
       </md-nav-list>
@@ -36,7 +36,7 @@ Let's add *Selected Us*er functionality and show the selected user details in ou
 
 </md-sidenav>
 <div class="content">
-   <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
+   <mat-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></mat-icon>
    <h2>{{selectedUser.name}}</h2>
    <p>{{selectedUser.details}}</p>
 </div>

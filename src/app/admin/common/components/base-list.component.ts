@@ -71,10 +71,10 @@ export abstract class BaseListComponent<T> implements OnInit {
   public errorMessage: string;
   public fieldFilterModel: Array<any> = [];
   public isLoading: boolean;
-  public keyName: string = 'id';
+  public keyName  = 'id';
   public listWithCount: IListWithCount<T>;
   public rows: Array<T> = [];
-  public searchValue: string = '';
+  public searchValue = '';
   public selectedFilterField: string = null;
   public selectedFilterType: string = null;
 
@@ -92,16 +92,16 @@ export abstract class BaseListComponent<T> implements OnInit {
   };
 
   public query: IQuery =
-  {
-    count: true,
-    expand: null,
-    filter: null,
-    keywords: null,
-    orderBy: null,
-    skip: 0,
-    select: null,
-    top: 5
-  };
+    {
+      count: true,
+      expand: null,
+      filter: null,
+      keywords: null,
+      orderBy: null,
+      skip: 0,
+      select: null,
+      top: 5
+    };
 
   get filterType(): any {
     return BaseListComponent.filterType;
@@ -159,7 +159,7 @@ export abstract class BaseListComponent<T> implements OnInit {
         // TODO: for ngx-datatable
         this.rows = [];
         for (let i = 0; i < listWithCount.list.length; i++) {
-          this.rows[this.query.skip + i] = listWithCount.list[i];
+          this.rows[i] = listWithCount.list[i];
         }
 
       },

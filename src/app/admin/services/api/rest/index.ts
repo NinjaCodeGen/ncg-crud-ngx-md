@@ -9,4 +9,3 @@ export * from './tenant-o-data-api.service';
 export * from './type-of-type-o-data-api.service';
 export * from './user-o-data-api.service';
 export * from './validation-o-data-api.service';
-export * from './data-context.service';

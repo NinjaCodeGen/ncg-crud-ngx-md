@@ -1,4 +1,3 @@
-
 import { browser, by, element, protractor } from 'protractor';
 import { AdminView } from '../admin.po';
 import { ValidationService } from '../common/services/validation.service';

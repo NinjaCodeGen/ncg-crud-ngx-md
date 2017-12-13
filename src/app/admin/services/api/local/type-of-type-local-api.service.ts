@@ -8,12 +8,10 @@ import { TypeOfType } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class TypeOfTypeApiLocal extends BaseApiLocal<TypeOfType> {
   public list: TypeOfType[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'typeOfType';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

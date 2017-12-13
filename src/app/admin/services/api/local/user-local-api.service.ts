@@ -8,12 +8,10 @@ import { User } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class UserApiLocal extends BaseApiLocal<User> {
   public list: User[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'user';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

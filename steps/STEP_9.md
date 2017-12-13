@@ -23,7 +23,7 @@ Creating an Angular Material dialog.
   </md-menu>
 
   <button md-fab (click)="openAdminDialog()" class="fab-bottom-right">
-    <md-icon>add</md-icon>
+    <mat-icon>add</mat-icon>
   </button>
 ```
 

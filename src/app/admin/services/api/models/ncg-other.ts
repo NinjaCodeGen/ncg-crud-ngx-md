@@ -4,8 +4,6 @@ import { Injectable } from '@angular/core';
 import { INcgOther } from './ncg-other-interface';
 
 
-'use strict';
-
 export class NcgOther implements INcgOther {
 
   // keys

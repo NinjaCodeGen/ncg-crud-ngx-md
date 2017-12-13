@@ -1,12 +1,10 @@
 // angular
-import { Component, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-// services
 import * as APIs from './';
 
 @Injectable()
 export class DataContext {
-  
   public DefaultTypeAndFormatApi: any;
   public DefaultValidationApi: any;
   public NcgOtherApi: any;
@@ -29,8 +27,7 @@ export class DataContext {
     typeOfTypeApi: APIs.TypeOfTypeApi,
     userApi: APIs.UserApi,
     validationApi: APIs.ValidationApi
-    
-  ) {
+  ) { 
     this.DefaultTypeAndFormatApi = defaultTypeAndFormatApi;
     this.DefaultValidationApi = defaultValidationApi;
     this.NcgOtherApi = ncgOtherApi;
@@ -43,6 +40,4 @@ export class DataContext {
     this.ValidationApi = validationApi;
     // this.defineLazyLoadedRepos();
   }
-
-  
 }

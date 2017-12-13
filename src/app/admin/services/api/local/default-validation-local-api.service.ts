@@ -8,12 +8,10 @@ import { DefaultValidation } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class DefaultValidationApiLocal extends BaseApiLocal<DefaultValidation> {
   public list: DefaultValidation[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'defaultValidation';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

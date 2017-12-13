@@ -1,9 +1,4 @@
 
-
-'use strict';
-
-
-
 export interface INcgOther {
 
   // keys
@@ -20,7 +15,4 @@ export interface INcgOther {
   withTitleDescDefaultMetaData?: string;
 
 
-
-
-  
 }

@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { SomeItem } from './../models';
 
-'use strict';
-
 @Injectable()
 export class SomeItemApi extends BaseApi<SomeItem> {
   public keyName: string = '';

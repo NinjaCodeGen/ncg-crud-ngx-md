@@ -8,12 +8,10 @@ import { NcgValidation } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class NcgValidationApiLocal extends BaseApiLocal<NcgValidation> {
   public list: NcgValidation[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'ncgValidation';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

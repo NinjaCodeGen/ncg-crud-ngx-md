@@ -1,8 +1,3 @@
-
-
-'use strict';
-
-
 import { User } from './user';
 
 export interface ITenant {
@@ -16,10 +11,7 @@ export interface ITenant {
   issuerValue?: string;
   name?: string;
 
-
   // nav many properties
   users?: Array<User>;
 
-
-  
 }

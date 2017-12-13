@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { NcgValidation } from './../models';
 
-'use strict';
-
 @Injectable()
 export class NcgValidationApi extends BaseApi<NcgValidation> {
   public keyName: string = '';

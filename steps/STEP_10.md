@@ -22,7 +22,7 @@ Creating a form inside of the Angular Material dialog.
 <form #form="ngForm" (ngSubmit)="dialogRef.close(form.value)" ngNativeValidate>
   <div fxLayout="column" fxLayoutGap="8px">
     <div fxLayout="row" fxLayoutAlign="start center">
-      <md-icon svgIcon="avatars:{{selectedAvatar}}" class="avatar"></md-icon>
+      <mat-icon svgIcon="avatars:{{selectedAvatar}}" class="avatar"></mat-icon>
       <md-select name="avatar" fxFlex placeholder="Avatar" [(ngModel)]="selectedAvatar">
         <md-option *ngFor="let avatar of avatars; let i = index;" [value]="avatar">Avatar - {{i + 1}}</md-option>
       </md-select>

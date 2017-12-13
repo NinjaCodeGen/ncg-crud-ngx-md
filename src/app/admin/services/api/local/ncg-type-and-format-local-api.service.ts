@@ -8,12 +8,10 @@ import { NcgTypeAndFormat } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class NcgTypeAndFormatApiLocal extends BaseApiLocal<NcgTypeAndFormat> {
   public list: NcgTypeAndFormat[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'ncgTypeAndFormat';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

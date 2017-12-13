@@ -1,499 +1,494 @@
 {
-  "properties": {
-    "address": {
-      "maxLength": 200,
-      "minLength": 0,
-      "type": "string",
-      "x-ncg": {
-        "label": "Address",
-        "placeholder": "address",
-        "type": "string",
-        "validations": {
-          "maxLength": {
-            "message": "Input should not be more than 200 characters!",
-            "value": 200
-          },
-          "minLength": {
-            "message": "Input should be at least 2 characters!",
-            "value": 2
-          },
-          "required": {
-            "value": true
-          }
-        },
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        }
-      }
-    },
-    "age": {
-      "format": "int32",
-      "maximum": 200,
-      "minimum": 0,
-      "type": "integer",
-      "x-ncg": {
-        "label": "Age",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "age",
-        "validations": {
-          "required": {
-            "value": true
-          },
-          "maximum": {
-            "value": 200
-          },
-          "minimum": {
-            "value": 0
-          }
-        },
-        "type": "integer",
-        "format": "int32"
-      }
-    },
-    "createdBy": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Created By",
-        "placeholder": "created by",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "createdDate": {
-      "format": "date-time",
-      "type": "string",
-      "x-ncg": {
-        "format": "date-time",
-        "label": "Created Date",
-        "placeholder": "created date",
-        "type": "string",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "emailAddress": {
-      "pattern": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)",
-      "type": "string",
-      "x-ncg": {
-        "label": "Email Address",
-        "placeholder": "email address",
-        "type": "string",
-        "validations": {
-          "pattern": {
-            "value": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)"
-          },
-          "required": {
-            "value": true
-          }
-        },
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        }
-      }
-    },
-    "gender": {
-      "enum": [
-        0,
-        1
-      ],
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Gender",
-        "placeholder": "gender",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {
-          "required": {
-            "value": true
-          }
-        }
-      }
-    },
-    "id": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Id",
-        "placeholder": "id",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "isActive": {
-      "type": "boolean",
-      "x-ncg": {
-        "label": "Is Active",
-        "placeholder": "is active",
-        "type": "boolean",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "name": {
-      "maxLength": 100,
-      "type": "string",
-      "x-ncg": {
-        "label": "Name",
-        "placeholder": "name",
-        "type": "string",
-        "validations": {
-          "maxLength": {
-            "value": 100
-          },
-          "required": {
-            "value": true
-          }
-        },
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        }
-      }
-    },
-    "password": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Password",
-        "placeholder": "password",
-        "type": "string",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "phone": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Phone",
-        "placeholder": "phone",
-        "type": "string",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {
-          "required": {
-            "value": true
-          }
-        }
-      }
-    },
-    "reOrderLevel": {
-      "enum": [
-        0,
-        5,
-        10,
-        15,
-        20,
-        25,
-        30
-      ],
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Re Order Level",
-        "placeholder": "re order level",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {
-          "required": {
-            "value": true
-          }
-        }
-      }
-    },
-    "tenant": {
-      "$ref": "#/definitions/Tenant",
-      "x-ncg": {
-        "label": "Tenant",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "tenant",
-        "validations": {}
-      }
-    },
-    "tenantId": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Tenant Id",
-        "placeholder": "tenant Id",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "testString": {
-      "enum": [
-        0,
-        1,
-        2
-      ],
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Test String",
-        "placeholder": "test string",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "uid": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Uid",
-        "placeholder": "uid",
-        "type": "string",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "updatedBy": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "format": "int32",
-        "label": "Updated By",
-        "placeholder": "updated by",
-        "type": "integer",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    },
-    "updatedDate": {
-      "format": "date-time",
-      "type": "string",
-      "x-ncg": {
-        "format": "date-time",
-        "label": "Updated Date",
-        "placeholder": "updated date",
-        "type": "string",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "validations": {}
-      }
-    }
-  },
-  "required": [
-    "name",
-    "age",
-    "gender",
-    "emailAddress",
-    "phone",
-    "address",
-    "reOrderLevel"
-  ],
-  "type": "object",
-  "x-ncg": {
-    "foreignKeys": [
-      {
-        "key": "tenantId",
-        "nav": "one",
-        "ref": "Tenant"
+   "properties": {
+      "address": {
+         "maxLength": 200,
+         "minLength": 0,
+         "type": "string",
+         "x-ncg": {
+            "label": "Address",
+            "placeholder": "address",
+            "type": "string",
+            "validations": {
+               "maxLength": {
+                  "message": "Input should not be more than 200 characters!",
+                  "value": 200
+               },
+               "minLength": {
+                  "message": "Input should be at least 2 characters!",
+                  "value": 2
+               },
+               "required": {
+                  "value": true
+               }
+            },
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            }
+         }
       },
-      {
-        "key": "tenantId",
-        "ref": "Tenant",
-        "nav": "one"
+      "age": {
+         "format": "int32",
+         "maximum": 200,
+         "minimum": 0,
+         "type": "integer",
+         "x-ncg": {
+            "label": "Age",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "age",
+            "validations": {
+               "required": {
+                  "value": true
+               },
+               "maximum": {
+                  "value": 200
+               },
+               "minimum": {
+                  "value": 0
+               }
+            },
+            "type": "integer",
+            "format": "int32"
+         }
+      },
+      "createdBy": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Created By",
+            "placeholder": "created by",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "createdDate": {
+         "format": "date-time",
+         "type": "string",
+         "x-ncg": {
+            "format": "date-time",
+            "label": "Created Date",
+            "placeholder": "created date",
+            "type": "string",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "emailAddress": {
+         "pattern": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)",
+         "type": "string",
+         "x-ncg": {
+            "label": "Email Address",
+            "placeholder": "email address",
+            "type": "string",
+            "validations": {
+               "pattern": {
+                  "value": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)"
+               },
+               "required": {
+                  "value": true
+               }
+            },
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            }
+         }
+      },
+      "gender": {
+         "enum": [
+            0,
+            1
+         ],
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Gender",
+            "placeholder": "gender",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            }
+         }
+      },
+      "id": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Id",
+            "placeholder": "id",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "isActive": {
+         "type": "boolean",
+         "x-ncg": {
+            "label": "Is Active",
+            "placeholder": "is active",
+            "type": "boolean",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "name": {
+         "maxLength": 100,
+         "type": "string",
+         "x-ncg": {
+            "label": "Name",
+            "placeholder": "name",
+            "type": "string",
+            "validations": {
+               "maxLength": {
+                  "value": 100
+               },
+               "required": {
+                  "value": true
+               }
+            },
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            }
+         }
+      },
+      "password": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Password",
+            "placeholder": "password",
+            "type": "string",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "phone": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Phone",
+            "placeholder": "phone",
+            "type": "string",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            }
+         }
+      },
+      "reOrderLevel": {
+         "enum": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30
+         ],
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Re Order Level",
+            "placeholder": "re order level",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            }
+         }
+      },
+      "tenant": {
+         "$ref": "#/definitions/Tenant",
+         "x-ncg": {
+            "label": "Tenant",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "tenant",
+            "validations": {}
+         }
+      },
+      "tenantId": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Tenant Id",
+            "placeholder": "tenant Id",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "testString": {
+         "enum": [
+            0,
+            1,
+            2
+         ],
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Test String",
+            "placeholder": "test string",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "uid": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Uid",
+            "placeholder": "uid",
+            "type": "string",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "updatedBy": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "format": "int32",
+            "label": "Updated By",
+            "placeholder": "updated by",
+            "type": "integer",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
+      },
+      "updatedDate": {
+         "format": "date-time",
+         "type": "string",
+         "x-ncg": {
+            "format": "date-time",
+            "label": "Updated Date",
+            "placeholder": "updated date",
+            "type": "string",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "validations": {}
+         }
       }
-    ],
-    "isSelected": true,
-    "label": "User"
-  }
+   },
+   "required": [
+      "name",
+      "age",
+      "gender",
+      "emailAddress",
+      "phone",
+      "address",
+      "reOrderLevel"
+   ],
+   "type": "object",
+   "x-ncg": {
+      "foreignKeys": [
+         {
+            "key": "tenantId",
+            "nav": "one",
+            "ref": "Tenant"
+         }
+      ],
+      "isSelected": true,
+      "label": "User"
+   }
 }

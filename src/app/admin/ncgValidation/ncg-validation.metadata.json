@@ -1,151 +1,151 @@
 {
-  "description": "4. Customized in x-ncg, validations.",
-  "properties": {
-    "id": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "label": "Id",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "id",
-        "validations": {},
-        "type": "integer",
-        "format": "int32"
+   "description": "4. Customized in x-ncg, validations.",
+   "properties": {
+      "id": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "label": "Id",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "id",
+            "validations": {},
+            "type": "integer",
+            "format": "int32"
+         }
+      },
+      "valEmailAddressPattern": {
+         "pattern": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)",
+         "type": "string",
+         "format": "email",
+         "x-ncg": {
+            "label": "Val Email Address Pattern",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "val email address pattern",
+            "validations": {
+               "pattern": {
+                  "value": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)"
+               }
+            },
+            "type": "string",
+            "format": "email"
+         }
+      },
+      "valMin0Max100Value": {
+         "maximum": 100,
+         "minimum": 0,
+         "type": "integer",
+         "x-ncg": {
+            "label": "Val Min0 Max100 Value",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "val min0 max100 value",
+            "validations": {
+               "maximum": {
+                  "value": 100
+               },
+               "minimum": {
+                  "value": 0
+               }
+            },
+            "type": "integer"
+         }
+      },
+      "valMin2Max8Length": {
+         "maxLength": 8,
+         "minLength": 2,
+         "type": "string",
+         "x-ncg": {
+            "label": "Val Min2 Max8 Length",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "val min2 max8 length",
+            "validations": {
+               "maxLength": {
+                  "value": 8
+               },
+               "minLength": {
+                  "value": 2
+               }
+            },
+            "type": "string"
+         }
+      },
+      "valRequiredField": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Val Required Field",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "val required field",
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            },
+            "type": "string"
+         }
       }
-    },
-    "valEmailAddressPattern": {
-      "pattern": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)",
-      "type": "string",
-      "format": "email",
-      "x-ncg": {
-        "label": "Val Email Address Pattern",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "val email address pattern",
-        "validations": {
-          "pattern": {
-            "value": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+(\\.[A-Za-z]+)"
-          }
-        },
-        "type": "string",
-        "format": "email"
-      }
-    },
-    "valMin0Max100Value": {
-      "maximum": 100,
-      "minimum": 0,
-      "type": "integer",
-      "x-ncg": {
-        "label": "Val Min0 Max100 Value",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "val min0 max100 value",
-        "validations": {
-          "maximum": {
-            "value": 100
-          },
-          "minimum": {
-            "value": 0
-          }
-        },
-        "type": "integer"
-      }
-    },
-    "valMin2Max8Length": {
-      "maxLength": 8,
-      "minLength": 2,
-      "type": "string",
-      "x-ncg": {
-        "label": "Val Min2 Max8 Length",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "val min2 max8 length",
-        "validations": {
-          "maxLength": {
-            "value": 8
-          },
-          "minLength": {
-            "value": 2
-          }
-        },
-        "type": "string"
-      }
-    },
-    "valRequiredField": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Val Required Field",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "val required field",
-        "validations": {
-          "required": {
-            "value": true
-          }
-        },
-        "type": "string"
-      }
-    }
-  },
-  "required": [
-    "valRequiredField"
-  ],
-  "type": "object",
-  "x-ncg": {
-    "order": 4,
-    "label": "Ncg Validation",
-    "isSelected": true,
-    "foreignKeys": []
-  }
+   },
+   "required": [
+      "valRequiredField"
+   ],
+   "type": "object",
+   "x-ncg": {
+      "order": 4,
+      "label": "Ncg Validation",
+      "isSelected": true,
+      "foreignKeys": []
+   }
 }

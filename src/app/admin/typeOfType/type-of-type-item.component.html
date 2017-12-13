@@ -1,111 +1,120 @@
 <div *ngIf="item && myForm" formToInject>
-      <form *ngIf="item" (ngSubmit)="onSubmit()" [formGroup]="myForm">
-      
-        
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
       <!--id - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="idInput" #idInput [placeholder]="formMetaData.properties.id['x-ncg'].label" [formControl]="myForm.controls['id']" [(ngModel)]="item.id" type="number" /> </md-input-container> 
-          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--abbreviation - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="abbreviationInput" #abbreviationInput [placeholder]="formMetaData.properties.abbreviation['x-ncg'].label" [formControl]="myForm.controls['abbreviation']" [(ngModel)]="item.abbreviation" type="text" /> </md-input-container> 
-          <small id="abbreviationErrorMsgs" *ngFor="let error of formMetaData.properties.abbreviation['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="abbreviationInput" #abbreviationInput [placeholder]="formMetaData.properties.abbreviation['x-ncg'].label" 
+             formControlName="abbreviation" type="text" />
+          </mat-form-field>
+          <small id="abbreviationErrorMsgs" *ngFor="let error of formMetaData.properties.abbreviation['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--createdBy - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="createdByInput" #createdByInput [placeholder]="formMetaData.properties.createdBy['x-ncg'].label" [formControl]="myForm.controls['createdBy']" [(ngModel)]="item.createdBy" type="number" /> </md-input-container> 
-          <small id="createdByErrorMsgs" *ngFor="let error of formMetaData.properties.createdBy['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="createdByErrorMsgs" *ngFor="let error of formMetaData.properties.createdBy['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--createdDate - string-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="createdDateInput" #createdDateInput [placeholder]="formMetaData.properties.createdDate['x-ncg'].label" [formControl]="myForm.controls['createdDate']" [(ngModel)]="item.createdDate" type="date" /> </md-input-container> 
-          <small id="createdDateErrorMsgs" *ngFor="let error of formMetaData.properties.createdDate['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+            <input matInput id="createdDateInput" #createdDateInput [placeholder]="formMetaData.properties.createdDate['x-ncg'].label" 
+            formControlName="createdDate" type="date" />
+          </mat-form-field>
+          <small id="createdDateErrorMsgs" *ngFor="let error of formMetaData.properties.createdDate['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--isActive - boolean-->
         <div class="mb-1">
-           <md-checkbox id="isActiveInput" #isActiveInput [(ngModel)]="item.isActive" [ngModelOptions]="{standalone: true}" [align]="'end'" name="isActive_checkbox">{{formMetaData.properties.isActive['x-ncg'].label}}</md-checkbox> 
-          <small id="isActiveErrorMsgs" *ngFor="let error of formMetaData.properties.isActive['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-checkbox id="isActiveInput" #isActiveInput formControlName="isActive" name="isActive_checkbox" [align]="'end'">
+             {{formMetaData.properties.isActive['x-ncg'].label}}
+          </mat-checkbox>
+          <small id="isActiveErrorMsgs" *ngFor="let error of formMetaData.properties.isActive['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--key - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="keyInput" #keyInput [placeholder]="formMetaData.properties.key['x-ncg'].label" [formControl]="myForm.controls['key']" [(ngModel)]="item.key" type="text" /> </md-input-container> 
-          <small id="keyErrorMsgs" *ngFor="let error of formMetaData.properties.key['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="keyInput" #keyInput [placeholder]="formMetaData.properties.key['x-ncg'].label" 
+             formControlName="key" type="text" />
+          </mat-form-field>
+          <small id="keyErrorMsgs" *ngFor="let error of formMetaData.properties.key['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--name - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="nameInput" #nameInput [placeholder]="formMetaData.properties.name['x-ncg'].label" [formControl]="myForm.controls['name']" [(ngModel)]="item.name" type="text" /> </md-input-container> 
-          <small id="nameErrorMsgs" *ngFor="let error of formMetaData.properties.name['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="nameInput" #nameInput [placeholder]="formMetaData.properties.name['x-ncg'].label" 
+             formControlName="name" type="text" />
+          </mat-form-field>
+          <small id="nameErrorMsgs" *ngFor="let error of formMetaData.properties.name['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--order - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="orderInput" #orderInput [placeholder]="formMetaData.properties.order['x-ncg'].label" [formControl]="myForm.controls['order']" [(ngModel)]="item.order" type="number" /> </md-input-container> 
-          <small id="orderErrorMsgs" *ngFor="let error of formMetaData.properties.order['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="orderErrorMsgs" *ngFor="let error of formMetaData.properties.order['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--parentID - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="parentIDInput" #parentIDInput [placeholder]="formMetaData.properties.parentID['x-ncg'].label" [formControl]="myForm.controls['parentID']" [(ngModel)]="item.parentID" type="text" /> </md-input-container> 
-          <small id="parentIDErrorMsgs" *ngFor="let error of formMetaData.properties.parentID['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="parentIDInput" #parentIDInput [placeholder]="formMetaData.properties.parentID['x-ncg'].label" 
+             formControlName="parentID" type="text" />
+          </mat-form-field>
+          <small id="parentIDErrorMsgs" *ngFor="let error of formMetaData.properties.parentID['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--typeID - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="typeIDInput" #typeIDInput [placeholder]="formMetaData.properties.typeID['x-ncg'].label" [formControl]="myForm.controls['typeID']" [(ngModel)]="item.typeID" type="text" /> </md-input-container> 
-          <small id="typeIDErrorMsgs" *ngFor="let error of formMetaData.properties.typeID['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="typeIDInput" #typeIDInput [placeholder]="formMetaData.properties.typeID['x-ncg'].label" 
+             formControlName="typeID" type="text" />
+          </mat-form-field>
+          <small id="typeIDErrorMsgs" *ngFor="let error of formMetaData.properties.typeID['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--uid - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="uidInput" #uidInput [placeholder]="formMetaData.properties.uid['x-ncg'].label" [formControl]="myForm.controls['uid']" [(ngModel)]="item.uid" type="text" /> </md-input-container> 
-          <small id="uidErrorMsgs" *ngFor="let error of formMetaData.properties.uid['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="uidInput" #uidInput [placeholder]="formMetaData.properties.uid['x-ncg'].label" 
+             formControlName="uid" type="text" />
+          </mat-form-field>
+          <small id="uidErrorMsgs" *ngFor="let error of formMetaData.properties.uid['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--updatedBy - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="updatedByInput" #updatedByInput [placeholder]="formMetaData.properties.updatedBy['x-ncg'].label" [formControl]="myForm.controls['updatedBy']" [(ngModel)]="item.updatedBy" type="number" /> </md-input-container> 
-          <small id="updatedByErrorMsgs" *ngFor="let error of formMetaData.properties.updatedBy['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="updatedByErrorMsgs" *ngFor="let error of formMetaData.properties.updatedBy['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--updatedDate - string-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="updatedDateInput" #updatedDateInput [placeholder]="formMetaData.properties.updatedDate['x-ncg'].label" [formControl]="myForm.controls['updatedDate']" [(ngModel)]="item.updatedDate" type="date" /> </md-input-container> 
-          <small id="updatedDateErrorMsgs" *ngFor="let error of formMetaData.properties.updatedDate['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+            <input matInput id="updatedDateInput" #updatedDateInput [placeholder]="formMetaData.properties.updatedDate['x-ncg'].label" 
+            formControlName="updatedDate" type="date" />
+          </mat-form-field>
+          <small id="updatedDateErrorMsgs" *ngFor="let error of formMetaData.properties.updatedDate['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--value - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="valueInput" #valueInput [placeholder]="formMetaData.properties.value['x-ncg'].label" [formControl]="myForm.controls['value']" [(ngModel)]="item.value" type="text" /> </md-input-container> 
-          <small id="valueErrorMsgs" *ngFor="let error of formMetaData.properties.value['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="valueInput" #valueInput [placeholder]="formMetaData.properties.value['x-ncg'].label" 
+             formControlName="value" type="text" />
+          </mat-form-field>
+          <small id="valueErrorMsgs" *ngFor="let error of formMetaData.properties.value['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
-      
+        
         <div class="mb-1">
-          <button md-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
-          <button md-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
-          <button md-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
-          <button md-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
-          <button md-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
+          <button mat-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
+          <button mat-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
+          <button mat-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
+          <button mat-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
+          <button mat-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
         </div>
       </form>
     </div>

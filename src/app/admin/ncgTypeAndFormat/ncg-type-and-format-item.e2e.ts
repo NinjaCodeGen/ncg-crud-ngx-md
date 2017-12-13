@@ -129,6 +129,6 @@ describe('Ncg Type And Format Item', () => {
         }
       }
     });
-  
+
   });
 });

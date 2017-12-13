@@ -9,9 +9,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TypeOfType } from './../services/api/models';
 
 // providers/services
+import { BusyIndicatorService, EntityService, ModalDialogService, NotifierService } from '../../core';
 import { LocalStorageService, RestoreService, ValidationService } from './../common/services';
-import { DataContext } from './../services/api/rest';
-import { EntityService, ModalDialogService, BusyIndicatorService, NotifierService } from '../../core';
+import { DataContext } from './../services/api/rest/data-context.service';
 
 // components
 import { BaseItemComponent } from './../common/components/base-item.component';
@@ -25,16 +25,14 @@ import * as moment from 'moment';
 })
 
 export class TypeOfTypeItemComponent extends BaseItemComponent<TypeOfType> {
-
-
   @Input() myForm: FormGroup;
 
   constructor(
-    protected datacontextService: DataContext,    
+    protected datacontextService: DataContext,
     protected titleService: Title,
-    protected entityService: EntityService, 
-    protected modalDialogService: ModalDialogService, 
-    protected busyIndicatorService: BusyIndicatorService, 
+    protected entityService: EntityService,
+    protected modalDialogService: ModalDialogService,
+    protected busyIndicatorService: BusyIndicatorService,
     protected notifierService: NotifierService,
     protected formBuilder: FormBuilder,
     protected location: Location,
@@ -45,9 +43,9 @@ export class TypeOfTypeItemComponent extends BaseItemComponent<TypeOfType> {
   ) {
     super(titleService,
       datacontextService.TypeOfTypeApi,
-      entityService, 
-      modalDialogService, 
-      busyIndicatorService, 
+      entityService,
+      modalDialogService,
+      busyIndicatorService,
       notifierService,
       formBuilder,
       location,
@@ -73,133 +71,107 @@ export class TypeOfTypeItemComponent extends BaseItemComponent<TypeOfType> {
 
   private addFormValidation() {
     this.myForm = this.formBuilder.group({
-      
       id: this.formMetaData.properties.id ? [
-          this.formMetaData.properties.id['x-ncg'].defaultValue ? this.formMetaData.properties.id['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.id['x-ncg'].defaultValue ?
+          this.formMetaData.properties.id['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.id['x-ncg'].validations)
         )
       ] : null,
-      
       abbreviation: this.formMetaData.properties.abbreviation ? [
-          this.formMetaData.properties.abbreviation['x-ncg'].defaultValue ? this.formMetaData.properties.abbreviation['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.abbreviation['x-ncg'].defaultValue ?
+          this.formMetaData.properties.abbreviation['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.abbreviation['x-ncg'].validations)
         )
       ] : null,
-      
       createdBy: this.formMetaData.properties.createdBy ? [
-          this.formMetaData.properties.createdBy['x-ncg'].defaultValue ? this.formMetaData.properties.createdBy['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.createdBy['x-ncg'].defaultValue ?
+          this.formMetaData.properties.createdBy['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.createdBy['x-ncg'].validations)
         )
       ] : null,
-      
       createdDate: this.formMetaData.properties.createdDate ? [
-          this.formMetaData.properties.createdDate['x-ncg'].defaultValue ? this.formMetaData.properties.createdDate['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.createdDate['x-ncg'].defaultValue ?
+          this.formMetaData.properties.createdDate['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.createdDate['x-ncg'].validations)
         )
       ] : null,
-      
       isActive: this.formMetaData.properties.isActive ? [
-          this.formMetaData.properties.isActive['x-ncg'].defaultValue ? this.formMetaData.properties.isActive['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.isActive['x-ncg'].defaultValue ?
+          this.formMetaData.properties.isActive['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.isActive['x-ncg'].validations)
         )
       ] : null,
-      
       key: this.formMetaData.properties.key ? [
-          this.formMetaData.properties.key['x-ncg'].defaultValue ? this.formMetaData.properties.key['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.key['x-ncg'].defaultValue ?
+          this.formMetaData.properties.key['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.key['x-ncg'].validations)
         )
       ] : null,
-      
-      concurrencyStamp: this.formMetaData.properties.concurrencyStamp ? [
-          this.formMetaData.properties.concurrencyStamp['x-ncg'].defaultValue ? this.formMetaData.properties.concurrencyStamp['x-ncg'].defaultValue : null,
-          Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.concurrencyStamp['x-ncg'].validations)
-        )
-      ] : null,
-      
-      created: this.formMetaData.properties.created ? [
-          this.formMetaData.properties.created['x-ncg'].defaultValue ? this.formMetaData.properties.created['x-ncg'].defaultValue : null,
-          Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.created['x-ncg'].validations)
-        )
-      ] : null,
-      
-      issuerValue: this.formMetaData.properties.issuerValue ? [
-          this.formMetaData.properties.issuerValue['x-ncg'].defaultValue ? this.formMetaData.properties.issuerValue['x-ncg'].defaultValue : null,
-          Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.issuerValue['x-ncg'].validations)
-        )
-      ] : null,
-      
       name: this.formMetaData.properties.name ? [
-          this.formMetaData.properties.name['x-ncg'].defaultValue ? this.formMetaData.properties.name['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.name['x-ncg'].defaultValue ?
+          this.formMetaData.properties.name['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.name['x-ncg'].validations)
         )
       ] : null,
-      
       order: this.formMetaData.properties.order ? [
-          this.formMetaData.properties.order['x-ncg'].defaultValue ? this.formMetaData.properties.order['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.order['x-ncg'].defaultValue ?
+          this.formMetaData.properties.order['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.order['x-ncg'].validations)
         )
       ] : null,
-      
       parentID: this.formMetaData.properties.parentID ? [
-          this.formMetaData.properties.parentID['x-ncg'].defaultValue ? this.formMetaData.properties.parentID['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.parentID['x-ncg'].defaultValue ?
+          this.formMetaData.properties.parentID['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.parentID['x-ncg'].validations)
         )
       ] : null,
-      
       typeID: this.formMetaData.properties.typeID ? [
-          this.formMetaData.properties.typeID['x-ncg'].defaultValue ? this.formMetaData.properties.typeID['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.typeID['x-ncg'].defaultValue ?
+          this.formMetaData.properties.typeID['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.typeID['x-ncg'].validations)
         )
       ] : null,
-      
       uid: this.formMetaData.properties.uid ? [
-          this.formMetaData.properties.uid['x-ncg'].defaultValue ? this.formMetaData.properties.uid['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.uid['x-ncg'].defaultValue ?
+          this.formMetaData.properties.uid['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.uid['x-ncg'].validations)
         )
       ] : null,
-      
       updatedBy: this.formMetaData.properties.updatedBy ? [
-          this.formMetaData.properties.updatedBy['x-ncg'].defaultValue ? this.formMetaData.properties.updatedBy['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.updatedBy['x-ncg'].defaultValue ?
+          this.formMetaData.properties.updatedBy['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.updatedBy['x-ncg'].validations)
         )
       ] : null,
-      
       updatedDate: this.formMetaData.properties.updatedDate ? [
-          this.formMetaData.properties.updatedDate['x-ncg'].defaultValue ? this.formMetaData.properties.updatedDate['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.updatedDate['x-ncg'].defaultValue ?
+          this.formMetaData.properties.updatedDate['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.updatedDate['x-ncg'].validations)
         )
       ] : null,
-      
       value: this.formMetaData.properties.value ? [
-          this.formMetaData.properties.value['x-ncg'].defaultValue ? this.formMetaData.properties.value['x-ncg'].defaultValue : null,
-          Validators.compose(
+        this.formMetaData.properties.value['x-ncg'].defaultValue ?
+          this.formMetaData.properties.value['x-ncg'].defaultValue : null,
+        Validators.compose(
           this.validationService.generateValidators(this.formMetaData.properties.value['x-ncg'].validations)
         )
-      ] : null,
-      
-      users: this.formMetaData.properties.users ? [
-          this.formMetaData.properties.users['x-ncg'].defaultValue ? this.formMetaData.properties.users['x-ncg'].defaultValue : null,
-          Validators.compose(
-          this.validationService.generateValidators(this.formMetaData.properties.users['x-ncg'].validations)
-        )
-      ] : null,
+      ] : null
     });
+    
+    this.myForm.patchValue(this.item);
   }
 
   protected customValidate() {

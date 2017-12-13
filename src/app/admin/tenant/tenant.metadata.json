@@ -1,189 +1,189 @@
 {
-  "properties": {
-    "concurrencyStamp": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Concurrency Stamp",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "concurrency stamp",
-        "validations": {
-          "required": {
-            "value": true
-          }
-        },
-        "type": "string"
-      }
-    },
-    "created": {
-      "format": "date-time",
-      "type": "string",
-      "x-ncg": {
-        "label": "Created",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "created",
-        "validations": {
-          "required": {
-            "value": true
-          }
-        },
-        "type": "string",
-        "format": "date-time"
-      }
-    },
-    "id": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "label": "Id",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "id",
-        "validations": {
-          "required": {
-            "value": true
-          }
-        },
-        "type": "integer",
-        "format": "int32"
-      }
-    },
-    "issuerValue": {
-      "maxLength": 1000,
-      "minLength": 0,
-      "type": "string",
-      "x-ncg": {
-        "label": "Issuer Value",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "issuer value",
-        "validations": {
-          "required": {
-            "value": true
-          },
-          "maxLength": {
-            "value": 1000
-          },
-          "minLength": {
-            "value": 0
-          }
-        },
-        "type": "string"
-      }
-    },
-    "name": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Name",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "name",
-        "validations": {
-          "required": {
-            "value": true
-          }
-        },
-        "type": "string"
-      }
-    },
-    "users": {
-      "items": {
-        "$ref": "#/definitions/User"
+   "properties": {
+      "concurrencyStamp": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Concurrency Stamp",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "concurrency stamp",
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            },
+            "type": "string"
+         }
       },
-      "type": "array",
-      "x-ncg": {
-        "label": "Users",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 100
-          }
-        },
-        "placeholder": "users",
-        "validations": {},
-        "type": "array"
-      }
-    }
-  },
-  "required": [
-    "id",
-    "concurrencyStamp",
-    "created",
-    "issuerValue",
-    "name"
-  ],
-  "type": "object",
-  "x-ncg": {
-    "foreignKeys": [
-      {
-        "key": "users",
-        "nav": "many",
-        "ref": "Users"
+      "created": {
+         "format": "date-time",
+         "type": "string",
+         "x-ncg": {
+            "label": "Created",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "created",
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            },
+            "type": "string",
+            "format": "date-time"
+         }
       },
-      {
-        "key": "users",
-        "ref": "User",
-        "nav": "many"
+      "id": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "label": "Id",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "id",
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            },
+            "type": "integer",
+            "format": "int32"
+         }
+      },
+      "issuerValue": {
+         "maxLength": 1000,
+         "minLength": 0,
+         "type": "string",
+         "x-ncg": {
+            "label": "Issuer Value",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "issuer value",
+            "validations": {
+               "required": {
+                  "value": true
+               },
+               "maxLength": {
+                  "value": 1000
+               },
+               "minLength": {
+                  "value": 0
+               }
+            },
+            "type": "string"
+         }
+      },
+      "name": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Name",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "name",
+            "validations": {
+               "required": {
+                  "value": true
+               }
+            },
+            "type": "string"
+         }
+      },
+      "users": {
+         "items": {
+            "$ref": "#/definitions/User"
+         },
+         "type": "array",
+         "x-ncg": {
+            "label": "Users",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 100
+               }
+            },
+            "placeholder": "users",
+            "validations": {},
+            "type": "array"
+         }
       }
-    ],
-    "isSelected": true,
-    "label": "Tenant"
-  }
+   },
+   "required": [
+      "id",
+      "concurrencyStamp",
+      "created",
+      "issuerValue",
+      "name"
+   ],
+   "type": "object",
+   "x-ncg": {
+      "foreignKeys": [
+         {
+            "key": "users",
+            "nav": "many",
+            "ref": "Users"
+         },
+         {
+            "key": "users",
+            "ref": "User",
+            "nav": "many"
+         }
+      ],
+      "isSelected": true,
+      "label": "Tenant"
+   }
 }

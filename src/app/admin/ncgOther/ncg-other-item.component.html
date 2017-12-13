@@ -1,76 +1,88 @@
 <div *ngIf="item && myForm" formToInject>
-      <form *ngIf="item" (ngSubmit)="onSubmit()" [formGroup]="myForm">
-      
-        
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
       <!--id - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="idInput" #idInput [placeholder]="formMetaData.properties.id['x-ncg'].label" [formControl]="myForm.controls['id']" [(ngModel)]="item.id" type="number" /> </md-input-container> 
-          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--itemNotDisplayed - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="itemNotDisplayedInput" #itemNotDisplayedInput [placeholder]="formMetaData.properties.itemNotDisplayed['x-ncg'].label" [formControl]="myForm.controls['itemNotDisplayed']" [(ngModel)]="item.itemNotDisplayed" type="text" /> </md-input-container> 
-          <small id="itemNotDisplayedErrorMsgs" *ngFor="let error of formMetaData.properties.itemNotDisplayed['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="itemNotDisplayedInput" #itemNotDisplayedInput [placeholder]="formMetaData.properties.itemNotDisplayed['x-ncg'].label" 
+             formControlName="itemNotDisplayed" type="text" />
+          </mat-form-field>
+          <small id="itemNotDisplayedErrorMsgs" *ngFor="let error of formMetaData.properties.itemNotDisplayed['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--itemNotGenerated - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="itemNotGeneratedInput" #itemNotGeneratedInput [placeholder]="formMetaData.properties.itemNotGenerated['x-ncg'].label" [formControl]="myForm.controls['itemNotGenerated']" [(ngModel)]="item.itemNotGenerated" type="text" /> </md-input-container> 
-          <small id="itemNotGeneratedErrorMsgs" *ngFor="let error of formMetaData.properties.itemNotGenerated['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="itemNotGeneratedInput" #itemNotGeneratedInput [placeholder]="formMetaData.properties.itemNotGenerated['x-ncg'].label" 
+             formControlName="itemNotGenerated" type="text" />
+          </mat-form-field>
+          <small id="itemNotGeneratedErrorMsgs" *ngFor="let error of formMetaData.properties.itemNotGenerated['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--listNotDisplayed - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="listNotDisplayedInput" #listNotDisplayedInput [placeholder]="formMetaData.properties.listNotDisplayed['x-ncg'].label" [formControl]="myForm.controls['listNotDisplayed']" [(ngModel)]="item.listNotDisplayed" type="text" /> </md-input-container> 
-          <small id="listNotDisplayedErrorMsgs" *ngFor="let error of formMetaData.properties.listNotDisplayed['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="listNotDisplayedInput" #listNotDisplayedInput [placeholder]="formMetaData.properties.listNotDisplayed['x-ncg'].label" 
+             formControlName="listNotDisplayed" type="text" />
+          </mat-form-field>
+          <small id="listNotDisplayedErrorMsgs" *ngFor="let error of formMetaData.properties.listNotDisplayed['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--listNotGenerated - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="listNotGeneratedInput" #listNotGeneratedInput [placeholder]="formMetaData.properties.listNotGenerated['x-ncg'].label" [formControl]="myForm.controls['listNotGenerated']" [(ngModel)]="item.listNotGenerated" type="text" /> </md-input-container> 
-          <small id="listNotGeneratedErrorMsgs" *ngFor="let error of formMetaData.properties.listNotGenerated['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="listNotGeneratedInput" #listNotGeneratedInput [placeholder]="formMetaData.properties.listNotGenerated['x-ncg'].label" 
+             formControlName="listNotGenerated" type="text" />
+          </mat-form-field>
+          <small id="listNotGeneratedErrorMsgs" *ngFor="let error of formMetaData.properties.listNotGenerated['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--orderAThird - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="orderAThirdInput" #orderAThirdInput [placeholder]="formMetaData.properties.orderAThird['x-ncg'].label" [formControl]="myForm.controls['orderAThird']" [(ngModel)]="item.orderAThird" type="text" /> </md-input-container> 
-          <small id="orderAThirdErrorMsgs" *ngFor="let error of formMetaData.properties.orderAThird['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="orderAThirdInput" #orderAThirdInput [placeholder]="formMetaData.properties.orderAThird['x-ncg'].label" 
+             formControlName="orderAThird" type="text" />
+          </mat-form-field>
+          <small id="orderAThirdErrorMsgs" *ngFor="let error of formMetaData.properties.orderAThird['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--orderBSecond - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="orderBSecondInput" #orderBSecondInput [placeholder]="formMetaData.properties.orderBSecond['x-ncg'].label" [formControl]="myForm.controls['orderBSecond']" [(ngModel)]="item.orderBSecond" type="text" /> </md-input-container> 
-          <small id="orderBSecondErrorMsgs" *ngFor="let error of formMetaData.properties.orderBSecond['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="orderBSecondInput" #orderBSecondInput [placeholder]="formMetaData.properties.orderBSecond['x-ncg'].label" 
+             formControlName="orderBSecond" type="text" />
+          </mat-form-field>
+          <small id="orderBSecondErrorMsgs" *ngFor="let error of formMetaData.properties.orderBSecond['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--orderCFirst - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="orderCFirstInput" #orderCFirstInput [placeholder]="formMetaData.properties.orderCFirst['x-ncg'].label" [formControl]="myForm.controls['orderCFirst']" [(ngModel)]="item.orderCFirst" type="text" /> </md-input-container> 
-          <small id="orderCFirstErrorMsgs" *ngFor="let error of formMetaData.properties.orderCFirst['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="orderCFirstInput" #orderCFirstInput [placeholder]="formMetaData.properties.orderCFirst['x-ncg'].label" 
+             formControlName="orderCFirst" type="text" />
+          </mat-form-field>
+          <small id="orderCFirstErrorMsgs" *ngFor="let error of formMetaData.properties.orderCFirst['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--withTitleDescDefaultMetaData - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="withTitleDescDefaultMetaDataInput" #withTitleDescDefaultMetaDataInput [placeholder]="formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].label" [formControl]="myForm.controls['withTitleDescDefaultMetaData']" [(ngModel)]="item.withTitleDescDefaultMetaData" type="text" /> </md-input-container> 
-          <small id="withTitleDescDefaultMetaDataErrorMsgs" *ngFor="let error of formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="withTitleDescDefaultMetaDataInput" #withTitleDescDefaultMetaDataInput [placeholder]="formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].label" 
+             formControlName="withTitleDescDefaultMetaData" type="text" />
+          </mat-form-field>
+          <small id="withTitleDescDefaultMetaDataErrorMsgs" *ngFor="let error of formMetaData.properties.withTitleDescDefaultMetaData['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
-      
+        
         <div class="mb-1">
-          <button md-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
-          <button md-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
-          <button md-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
-          <button md-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
-          <button md-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
+          <button mat-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
+          <button mat-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
+          <button mat-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
+          <button mat-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
+          <button mat-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
         </div>
       </form>
     </div>

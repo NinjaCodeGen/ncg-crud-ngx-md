@@ -56,7 +56,7 @@ which happens to be `<md-menu #menu>`, and by clicking the trigger element, the 
     <span fxFlex></span>
 
     <button md-icon-button [mdMenuTriggerFor]="themeMenu">
-      <md-icon>more_vert</md-icon>
+      <mat-icon>more_vert</mat-icon>
     </button>
 
   </md-toolbar>

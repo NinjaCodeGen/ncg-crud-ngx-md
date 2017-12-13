@@ -1,17 +1,17 @@
-import { NgModule, ModuleWithProviders, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LocalQueryHelper, LocalStorageService, RestoreService, ValidationService } from './services';
 
 // 3rd party
 import {
-  MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule,
-  MdRadioModule, MdButtonModule, MdProgressBarModule, MdSelectModule, MdToolbarModule
-} from "@angular/material";
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule,
+  MatProgressBarModule, MatRadioModule, MatSelectModule, MatToolbarModule
+} from '@angular/material';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 // pipes
 import { DisplayDataTransformPipe, OrderBy } from './pipes';
@@ -31,11 +31,11 @@ import { ParentFilterAndPagingComponent } from './components';
   ],
   exports: [
     CommonModule, FormsModule, ReactiveFormsModule,
-    InputDebounceComponent, 
+    InputDebounceComponent,
     FlexLayoutModule,
     NgxDatatableModule,
-    MdButtonModule, MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule,
-    MdRadioModule, MdProgressBarModule, MdSelectModule, MdToolbarModule,
+    MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule,
+    MatRadioModule, MatProgressBarModule, MatSelectModule, MatToolbarModule,
     ParentFilterAndPagingComponent
   ],
   entryComponents: [
@@ -46,8 +46,8 @@ import { ParentFilterAndPagingComponent } from './components';
     FormsModule, ReactiveFormsModule,
     FlexLayoutModule,
     NgxDatatableModule,
-    MdButtonModule, MdCardModule, MdCheckboxModule, MdIconModule, MdInputModule,
-    MdRadioModule, MdProgressBarModule, MdSelectModule, MdToolbarModule
+    MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatInputModule,
+    MatRadioModule, MatProgressBarModule, MatSelectModule, MatToolbarModule
   ],
   providers: [
     FormBuilder,

@@ -1,10 +1,4 @@
 
-
-'use strict';
-
-
-import { Tenant } from './tenant';
-
 export interface IValidation {
 
   // keys
@@ -32,7 +26,4 @@ export interface IValidation {
   zip?: string;
 
 
-
-
-  
 }

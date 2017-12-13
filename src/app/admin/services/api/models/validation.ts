@@ -3,9 +3,6 @@ import { Injectable } from '@angular/core';
 
 import { IValidation } from './validation-interface';
 
-import { Tenant } from './tenant';
-
-'use strict';
 
 export class Validation implements IValidation {
 

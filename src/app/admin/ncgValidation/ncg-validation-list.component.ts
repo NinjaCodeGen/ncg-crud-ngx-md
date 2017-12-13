@@ -15,7 +15,7 @@ import { DisplayDataTransformPipe } from './../common/pipes';
 
 // services
 import { LocalStorageService, RestoreService } from './../common/services';
-import { DataContext } from './../services/api/rest';
+import { DataContext } from './../services/api/rest/data-context.service';
 import { EntityService, ModalDialogService, BusyIndicatorService, NotifierService } from '../../core';
 
 @Component({
@@ -25,7 +25,7 @@ import { EntityService, ModalDialogService, BusyIndicatorService, NotifierServic
 
 export class NcgValidationListComponent extends BaseListComponent<NcgValidation>  {
 
-  public keyName: string = 'id';
+  public keyName: 'id';
   public fieldFilterModel: any = null;
   public formMetaData: any = null;
   

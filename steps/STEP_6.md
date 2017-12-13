@@ -23,7 +23,7 @@ Here we will use `md-card` and `md-slide-toggle` components from Angular Materia
 <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
 
   <md-card fxFlex="80">
-    <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
+    <mat-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></mat-icon>
     <h2>{{selectedUser.name}}</h2>
     <p>{{selectedUser.details}}</p>
   </md-card>

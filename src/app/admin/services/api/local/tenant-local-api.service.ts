@@ -8,12 +8,10 @@ import { Tenant } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class TenantApiLocal extends BaseApiLocal<Tenant> {
   public list: Tenant[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'tenant';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

@@ -9,4 +9,3 @@ export * from './tenant-local-api.service';
 export * from './type-of-type-local-api.service';
 export * from './user-local-api.service';
 export * from './validation-local-api.service';
-export * from './data-context-local.service';
