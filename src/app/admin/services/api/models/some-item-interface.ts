@@ -1,9 +1,4 @@
 
-
-'use strict';
-
-
-
 export interface ISomeItem {
 
   // keys
@@ -13,7 +8,4 @@ export interface ISomeItem {
   name?: string;
 
 
-
-
-  
 }

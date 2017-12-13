@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { NcgOther } from './../models';
 
-'use strict';
-
 @Injectable()
 export class NcgOtherApi extends BaseApi<NcgOther> {
   public keyName: string = '';

@@ -1,8 +1,3 @@
-
-
-'use strict';
-
-
 import { SomeItem } from './some-item';
 
 export interface INcgTypeAndFormat {
@@ -19,10 +14,7 @@ export interface INcgTypeAndFormat {
   someStringDateTime?: string;
   someStringUid?: string;
 
-
   // nav many properties
   someArray?: Array<SomeItem>;
 
-
-  
 }

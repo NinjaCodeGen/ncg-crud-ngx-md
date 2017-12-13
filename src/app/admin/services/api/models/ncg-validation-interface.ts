@@ -1,10 +1,4 @@
 
-
-'use strict';
-
-
-import { SomeItem } from './some-item';
-
 export interface INcgValidation {
 
   // keys
@@ -17,7 +11,4 @@ export interface INcgValidation {
   valRequiredField?: string;
 
 
-
-
-  
 }

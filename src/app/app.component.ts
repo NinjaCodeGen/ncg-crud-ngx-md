@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdIconRegistry, MdDialog } from '@angular/material';
+import { MatIconRegistry, MatDialog } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { DialogComponent } from './dialog/dialog.component';
@@ -34,6 +34,6 @@ md-sidenav {
 }`]
 })
 export class AppComponent {
-  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer, private dialog: MdDialog) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private dialog: MatDialog) {
   }
 }

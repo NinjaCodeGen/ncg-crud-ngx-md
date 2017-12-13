@@ -5,8 +5,6 @@ import { IDefaultTypeAndFormat } from './default-type-and-format-interface';
 
 import { SomeItem } from './some-item';
 
-'use strict';
-
 export class DefaultTypeAndFormat implements IDefaultTypeAndFormat {
 
   // keys

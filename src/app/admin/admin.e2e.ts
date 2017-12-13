@@ -1,4 +1,3 @@
-
 import { browser, by, element } from 'protractor';
 import { AdminView } from './admin.po';
 
@@ -41,6 +40,7 @@ describe('Admin', () => {
       
       adminView.goToValidationView();
       expect(browser.getCurrentUrl()).toContain(browser.baseUrl + '/admin/validation');
+      
     });
   });
 });

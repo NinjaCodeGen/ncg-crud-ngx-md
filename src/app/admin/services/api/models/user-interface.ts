@@ -1,8 +1,3 @@
-
-
-'use strict';
-
-
 import { Tenant } from './tenant';
 
 export interface IUser {
@@ -29,9 +24,6 @@ export interface IUser {
   updatedDate?: string;
 
 
-
-
   // nav one properties
   tenant?: Tenant;
-  
 }

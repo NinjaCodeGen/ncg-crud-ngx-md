@@ -129,6 +129,6 @@ describe('Default Type And Format Item', () => {
         }
       }
     });
-  
+
   });
 });

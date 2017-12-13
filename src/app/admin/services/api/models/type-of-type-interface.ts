@@ -1,10 +1,4 @@
 
-
-'use strict';
-
-
-import { User } from './user';
-
 export interface ITypeOfType {
 
   // keys
@@ -26,7 +20,4 @@ export interface ITypeOfType {
   value?: string;
 
 
-
-
-  
 }

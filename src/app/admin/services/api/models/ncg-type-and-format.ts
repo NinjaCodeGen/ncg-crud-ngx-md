@@ -5,8 +5,6 @@ import { INcgTypeAndFormat } from './ncg-type-and-format-interface';
 
 import { SomeItem } from './some-item';
 
-'use strict';
-
 export class NcgTypeAndFormat implements INcgTypeAndFormat {
 
   // keys

@@ -1,8 +1,3 @@
-
-
-'use strict';
-
-
 import { SomeItem } from './some-item';
 
 export interface IDefaultTypeAndFormat {
@@ -21,10 +16,7 @@ export interface IDefaultTypeAndFormat {
   someStringUid?: string;
   someStringUri?: string;
 
-
   // nav many properties
   someArray?: Array<SomeItem>;
 
-
-  
 }

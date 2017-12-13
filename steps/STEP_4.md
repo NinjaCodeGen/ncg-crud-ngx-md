@@ -26,7 +26,7 @@ Here you will use the `MdIconRegistry` service provided by Material which allows
       <md-tab label="Users">
         <md-nav-list>
           <md-list-item *ngFor="let user of users">
-            <md-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></md-icon>
+            <mat-icon svgIcon="avatars:{{user.avatar}}" class="avatar"></mat-icon>
             <span>{{user.name}}</span>
           </md-list-item>
         </md-nav-list>
@@ -42,7 +42,7 @@ Here you will use the `MdIconRegistry` service provided by Material which allows
 
 By using the `addSvgIconSetInNamespace` function we provide a namespace that can be used with `md-icon` 
 and the location of that svg group.
-By that, we can have `<md-icon svgIcon="[namespace]:[id]">` and it would look the namespace and the id in it.
+By that, we can have `<mat-icon svgIcon="[namespace]:[id]">` and it would look the namespace and the id in it.
 
 ###### File:  `src/app/app.component.ts`
 

@@ -8,12 +8,10 @@ import { NcgOther } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class NcgOtherApiLocal extends BaseApiLocal<NcgOther> {
   public list: NcgOther[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'ncgOther';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

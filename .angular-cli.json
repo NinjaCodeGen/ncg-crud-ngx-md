@@ -20,6 +20,7 @@
     "styles": [
       "../node_modules/@swimlane/ngx-datatable/release/index.css",
       "../node_modules/@swimlane/ngx-datatable/release/themes/material.css",
+      "../node_modules/@swimlane/ngx-datatable/release/assets/icons.css",      
       "styles.css",
       "theme.scss",
       "assets/fonts/data-table/icons.css",

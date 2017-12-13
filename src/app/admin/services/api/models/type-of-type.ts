@@ -3,9 +3,6 @@ import { Injectable } from '@angular/core';
 
 import { ITypeOfType } from './type-of-type-interface';
 
-import { User } from './user';
-
-'use strict';
 
 export class TypeOfType implements ITypeOfType {
 

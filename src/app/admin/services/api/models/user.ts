@@ -5,8 +5,6 @@ import { IUser } from './user-interface';
 
 import { Tenant } from './tenant';
 
-'use strict';
-
 export class User implements IUser {
 
   // keys

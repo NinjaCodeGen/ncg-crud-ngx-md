@@ -5,8 +5,6 @@ import { ITenant } from './tenant-interface';
 
 import { User } from './user';
 
-'use strict';
-
 export class Tenant implements ITenant {
 
   // keys

@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { DefaultValidation } from './../models';
 
-'use strict';
-
 @Injectable()
 export class DefaultValidationApi extends BaseApi<DefaultValidation> {
   public keyName: string = '';

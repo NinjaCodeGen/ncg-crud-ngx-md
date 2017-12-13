@@ -1,6 +1,6 @@
 <!--User-->
     <div class="mb-1">
-      <button id="addButton" md-raised-button color="primary" class="btn btn-secondary" [routerLink]="['new']" [attr.aria-label]="Add">Add</button>
+      <button id="addButton" mat-raised-button color="primary" class="btn btn-secondary" [routerLink]="['new']" [attr.aria-label]="Add">Add</button>
     </div>
     <br />
     <parentFilterAndPaging #parentFilterAndPagingRef [paginationData]="paginationData" [query]="query" [filterType]="filterType" [fieldFilterModel]="fieldFilterModel" [filterValue]="filterValue" (onListClicked)="getList()" (onPageChanged)="pageChanged($event)"
@@ -8,112 +8,170 @@
     </parentFilterAndPaging>
     <br />
     <div class="mb-1">
-      <ngx-datatable 
-        *ngIf="listWithCount" class="material" 
-        [rows]="rows" 
-        [columnMode]="'force'" 
-        [headerHeight]="50" 
-        [footerHeight]="50" 
-        [rowHeight]="'auto'" 
-        [externalPaging]="true" 
+      <ngx-datatable
+        *ngIf="listWithCount" class="material"
+        [rows]="rows"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [externalPaging]="true"
         [externalSorting]="true"
-        [count]="listWithCount.count" 
+        [count]="listWithCount.count"
         [offset]="paginationData.currentPage - 1"
-        [limit]="paginationData.maxSize" 
+        [limit]="paginationData.maxSize"
         (page)='onPageChanged($event)'
         (sort)="onSort($event)">
         <ngx-datatable-column name="Actions">
           <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-            <button id="editButton" md-icon-button md-button-sm (click)="edit(row)" [attr.aria-label]="edit"><md-icon>edit</md-icon></button>
-            <button id="deleteButton" md-icon-button md-button-sm (click)="delete(row.id)" [attr.aria-label]="delete"><md-icon>delete</md-icon></button>
+            <button id="editButton" mat-icon-button mat-button-sm (click)="edit(row)" [attr.aria-label]="edit"><mat-icon>edit</mat-icon></button>
+            <button id="deleteButton" mat-icon-button mat-button-sm (click)="delete(row.id)" [attr.aria-label]="delete"><mat-icon>delete</mat-icon></button>
           </ng-template>
         </ngx-datatable-column>
         
         <!--id-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.id['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.id['x-ncg'].label }}" *ngIf="!formMetaData.properties.id['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--address-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.address['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.address['x-ncg'].label }}" *ngIf="!formMetaData.properties.address['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--age-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.age['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.age['x-ncg'].label }}" *ngIf="!formMetaData.properties.age['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--createdBy-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.createdBy['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.createdBy['x-ncg'].label }}" *ngIf="!formMetaData.properties.createdBy['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--createdDate-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.createdDate['x-ncg'].label }}">
+        <ngx-datatable-column name="{{ formMetaData.properties.createdDate['x-ncg'].label }}" *ngIf="!formMetaData.properties.createdDate['x-ncg'].view.list.isHidden">
           <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-            {{ value | date:"MM/dd/yyyy" }}      
+            {{ value | date:"MM/dd/yyyy" }}
           </ng-template>
         </ngx-datatable-column>
         
         <!--emailAddress-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.emailAddress['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.emailAddress['x-ncg'].label }}" *ngIf="!formMetaData.properties.emailAddress['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--gender-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.gender['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.gender['x-ncg'].label }}" *ngIf="!formMetaData.properties.gender['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--isActive-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.isActive['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.isActive['x-ncg'].label }}" *ngIf="!formMetaData.properties.isActive['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--name-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.name['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.name['x-ncg'].label }}" *ngIf="!formMetaData.properties.name['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--password-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.password['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.password['x-ncg'].label }}" *ngIf="!formMetaData.properties.password['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--phone-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.phone['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.phone['x-ncg'].label }}" *ngIf="!formMetaData.properties.phone['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--reOrderLevel-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.reOrderLevel['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.reOrderLevel['x-ncg'].label }}" *ngIf="!formMetaData.properties.reOrderLevel['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--tenant-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.tenant['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.tenant['x-ncg'].label }}" *ngIf="!formMetaData.properties.tenant['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--tenantId-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.tenantId['x-ncg'].label }}"></ngx-datatable-column>
-        
-        <ngx-datatable-column name="{{ formMetaData.properties.tenantId['x-ncg'].label }}">
+        <ngx-datatable-column name="{{ formMetaData.properties.tenantId['x-ncg'].label }}" *ngIf="!formMetaData.properties.tenantId['x-ncg'].view.list.isHidden">
           <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
             {{ value }}
-            <!--{{ value | myDisplayDataTransform:[tenantList,"id","name"] }}--> 
           </ng-template>
         </ngx-datatable-column>
+        
         <!--testString-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.testString['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.testString['x-ncg'].label }}" *ngIf="!formMetaData.properties.testString['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--uid-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.uid['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.uid['x-ncg'].label }}" *ngIf="!formMetaData.properties.uid['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--updatedBy-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.updatedBy['x-ncg'].label }}"></ngx-datatable-column>
+        <ngx-datatable-column name="{{ formMetaData.properties.updatedBy['x-ncg'].label }}" *ngIf="!formMetaData.properties.updatedBy['x-ncg'].view.list.isHidden">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
         
         <!--updatedDate-->
         
-        <ngx-datatable-column name="{{ formMetaData.properties.updatedDate['x-ncg'].label }}">
+        <ngx-datatable-column name="{{ formMetaData.properties.updatedDate['x-ncg'].label }}" *ngIf="!formMetaData.properties.updatedDate['x-ncg'].view.list.isHidden">
           <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-            {{ value | date:"MM/dd/yyyy" }}      
+            {{ value | date:"MM/dd/yyyy" }}
           </ng-template>
         </ngx-datatable-column>
-         
+        
       </ngx-datatable>
     </div>

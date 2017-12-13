@@ -7,7 +7,12 @@ import { HttpModule, Http } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
-import { MaterialModule } from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule,
+  MatIconModule, MatInputModule, MatListModule, MatMenuModule,
+  MatProgressBarModule, MatRadioModule, MatSidenavModule, MatSelectModule,
+  MatToolbarModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -22,6 +27,12 @@ import 'hammerjs';
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
+
+const MAT_MODULE = [
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule,
+  MatIconModule, MatInputModule, MatListModule, MatMenuModule,
+  MatProgressBarModule, MatRadioModule, MatSidenavModule, MatSelectModule,
+  MatToolbarModule];
 
 @NgModule({
   declarations: [
@@ -40,9 +51,12 @@ export function createTranslateLoader(http: Http) {
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
-    MaterialModule,
     FlexLayoutModule,
+    MAT_MODULE,
     BrowserAnimationsModule
+  ],
+  exports: [
+    MAT_MODULE
   ],
   providers: [MenuItems],
   entryComponents: [],

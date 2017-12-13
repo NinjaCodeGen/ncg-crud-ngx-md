@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { DefaultTypeAndFormat } from './../models';
 
-'use strict';
-
 @Injectable()
 export class DefaultTypeAndFormatApi extends BaseApi<DefaultTypeAndFormat> {
   public keyName: string = '';

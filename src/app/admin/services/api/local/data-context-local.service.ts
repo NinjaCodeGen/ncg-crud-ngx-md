@@ -27,8 +27,7 @@ export class DataContextLocal {
     typeOfTypeApi: APIs.TypeOfTypeApiLocal,
     userApi: APIs.UserApiLocal,
     validationApi: APIs.ValidationApiLocal
-    
-  ) {
+  ) { 
     this.DefaultTypeAndFormatApi = defaultTypeAndFormatApi;
     this.DefaultValidationApi = defaultValidationApi;
     this.NcgOtherApi = ncgOtherApi;

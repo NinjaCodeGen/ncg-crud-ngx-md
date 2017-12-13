@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { TypeOfType } from './../models';
 
-'use strict';
-
 @Injectable()
 export class TypeOfTypeApi extends BaseApi<TypeOfType> {
   public keyName: string = '';

@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { NcgTypeAndFormat } from './../models';
 
-'use strict';
-
 @Injectable()
 export class NcgTypeAndFormatApi extends BaseApi<NcgTypeAndFormat> {
   public keyName: string = '';

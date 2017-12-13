@@ -1,225 +1,220 @@
 {
-  "description": "3. Customize in x-ncg, type and format.",
-  "properties": {
-    "id": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "label": "Id",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "id",
-        "validations": {},
-        "type": "integer",
-        "format": "int32"
-      }
-    },
-    "someArray": {
-      "items": {
-        "$ref": "#/definitions/SomeItem"
+   "description": "3. Customize in x-ncg, type and format.",
+   "properties": {
+      "id": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "label": "Id",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "id",
+            "validations": {},
+            "type": "integer",
+            "format": "int32"
+         }
       },
-      "type": "array",
-      "x-ncg": {
-        "label": "Some Array",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some array",
-        "validations": {},
-        "type": "array"
-      }
-    },
-    "someBoolean": {
-      "type": "boolean",
-      "x-ncg": {
-        "label": "Some Boolean",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some boolean",
-        "validations": {},
-        "type": "boolean"
-      }
-    },
-    "someIntegerInt32": {
-      "format": "int32",
-      "type": "integer",
-      "x-ncg": {
-        "label": "Some Integer Int32",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some integer int32",
-        "validations": {},
-        "type": "integer",
-        "format": "int32"
-      }
-    },
-    "someNumber": {
-      "type": "number",
-      "x-ncg": {
-        "label": "Some Number",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some number",
-        "validations": {},
-        "type": "number"
-      }
-    },
-    "someNumberDouble": {
-      "format": "double",
-      "type": "number",
-      "x-ncg": {
-        "label": "Some Number Double",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some number double",
-        "validations": {},
-        "type": "number",
-        "format": "double"
-      }
-    },
-    "someString": {
-      "type": "string",
-      "x-ncg": {
-        "label": "Some String",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some string",
-        "validations": {},
-        "type": "string"
-      }
-    },
-    "someStringDateTime": {
-      "format": "date-time",
-      "type": "string",
-      "x-ncg": {
-        "label": "Some String Date Time",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some string date time",
-        "validations": {},
-        "type": "string",
-        "format": "date-time"
-      }
-    },
-    "someStringUid": {
-      "format": "uid",
-      "type": "string",
-      "x-ncg": {
-        "label": "Some String Uid",
-        "view": {
-          "item": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          },
-          "list": {
-            "isDisplayed": true,
-            "isGenerated": true,
-            "order": 1
-          }
-        },
-        "placeholder": "some string uid",
-        "validations": {},
-        "type": "string",
-        "format": "uid"
-      }
-    }
-  },
-  "type": "object",
-  "x-ncg": {
-    "order": 3,
-    "label": "NCG Type And Format",
-    "isSelected": true,
-    "foreignKeys": [
-      {
-        "key": "someArray",
-        "ref": "SomeItem",
-        "nav": "many"
+      "someArray": {
+         "items": {
+            "$ref": "#/definitions/SomeItem"
+         },
+         "type": "array",
+         "x-ncg": {
+            "label": "Some Array",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some array",
+            "validations": {},
+            "type": "array"
+         }
       },
-      {
-        "key": "someArray",
-        "ref": "SomeItem",
-        "nav": "many"
+      "someBoolean": {
+         "type": "boolean",
+         "x-ncg": {
+            "label": "Some Boolean",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some boolean",
+            "validations": {},
+            "type": "boolean"
+         }
+      },
+      "someIntegerInt32": {
+         "format": "int32",
+         "type": "integer",
+         "x-ncg": {
+            "label": "Some Integer Int32",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some integer int32",
+            "validations": {},
+            "type": "integer",
+            "format": "int32"
+         }
+      },
+      "someNumber": {
+         "type": "number",
+         "x-ncg": {
+            "label": "Some Number",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some number",
+            "validations": {},
+            "type": "number"
+         }
+      },
+      "someNumberDouble": {
+         "format": "double",
+         "type": "number",
+         "x-ncg": {
+            "label": "Some Number Double",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some number double",
+            "validations": {},
+            "type": "number",
+            "format": "double"
+         }
+      },
+      "someString": {
+         "type": "string",
+         "x-ncg": {
+            "label": "Some String",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some string",
+            "validations": {},
+            "type": "string"
+         }
+      },
+      "someStringDateTime": {
+         "format": "date-time",
+         "type": "string",
+         "x-ncg": {
+            "label": "Some String Date Time",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some string date time",
+            "validations": {},
+            "type": "string",
+            "format": "date-time"
+         }
+      },
+      "someStringUid": {
+         "format": "uid",
+         "type": "string",
+         "x-ncg": {
+            "label": "Some String Uid",
+            "view": {
+               "item": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               },
+               "list": {
+                  "isHidden": false,
+                  "isGenerated": true,
+                  "order": 1
+               }
+            },
+            "placeholder": "some string uid",
+            "validations": {},
+            "type": "string",
+            "format": "uid"
+         }
       }
-    ]
-  }
+   },
+   "type": "object",
+   "x-ncg": {
+      "order": 3,
+      "label": "NCG Type And Format",
+      "isSelected": true,
+      "foreignKeys": [
+         {
+            "key": "someArray",
+            "ref": "SomeItem",
+            "nav": "many"
+         }
+      ]
+   }
 }

@@ -12,8 +12,6 @@ import { HttpHelper } from './../../../common/services/api/HttpHelper';
 
 import { Validation } from './../models';
 
-'use strict';
-
 @Injectable()
 export class ValidationApi extends BaseApi<Validation> {
   public keyName: string = '';

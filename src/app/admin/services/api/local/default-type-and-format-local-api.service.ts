@@ -8,12 +8,10 @@ import { DefaultTypeAndFormat } from './../models';
 import { BaseApiLocal } from './../../../common/services/api/BaseApiLocal';
 import { LocalQueryHelper } from './../../../common/services/api/LocalQueryHelper';
 
-'use strict';
-
 @Injectable()
 export class DefaultTypeAndFormatApiLocal extends BaseApiLocal<DefaultTypeAndFormat> {
   public list: DefaultTypeAndFormat[];
-  public keyName: string = 'id';
+  public keyName: 'id';
   public resourceName: string = 'defaultTypeAndFormat';
 
   constructor(_LocalQueryHelper: LocalQueryHelper) {

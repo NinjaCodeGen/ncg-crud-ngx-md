@@ -2,22 +2,22 @@
 import { NgModule } from '@angular/core';
 
 import {
-  DataContextLocal,
-   DefaultTypeAndFormatApiLocal,
-   DefaultValidationApiLocal,
-   NcgOtherApiLocal,
-   NcgTypeAndFormatApiLocal,
-   NcgValidationApiLocal,
-   SomeItemApiLocal,
-   TenantApiLocal,
-   TypeOfTypeApiLocal,
-   UserApiLocal,
-   ValidationApiLocal,
+  DefaultTypeAndFormatApiLocal,
+  DefaultValidationApiLocal,
+  NcgOtherApiLocal,
+  NcgTypeAndFormatApiLocal,
+  NcgValidationApiLocal,
+  SomeItemApiLocal,
+  TenantApiLocal,
+  TypeOfTypeApiLocal,
+  UserApiLocal,
+  ValidationApiLocal
 } from './api/local';
 
-import { DataContext } from './api/rest';
+import { DataContextLocal } from './api/local/data-context-local.service';
+import { DataContext } from './api/rest/data-context.service';
 
-@NgModule({
+@NgModule({ 
   providers: [
     DefaultTypeAndFormatApiLocal,
     DefaultValidationApiLocal,

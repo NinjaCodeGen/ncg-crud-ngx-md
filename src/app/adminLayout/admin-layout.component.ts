@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { MdIconRegistry, MdDialog } from '@angular/material';
+import { MatDialog, MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MenuItems } from './../admin/admin.menu';
 import { TranslateService } from 'ng2-translate/ng2-translate';
@@ -18,7 +18,7 @@ export class AdminLayoutComponent {
   url = 'https://ninjacodegen.com/';
 
   constructor(private router: Router, public menuItems: MenuItems, public translate: TranslateService,
-    iconRegistry: MdIconRegistry, sanitizer: DomSanitizer, private dialog: MdDialog) {
+    iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private dialog: MatDialog) {
     const browserLang: string = translate.getBrowserLang();
     translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }

@@ -1,48 +1,48 @@
 <div *ngIf="item && myForm" formToInject>
-      <form *ngIf="item" (ngSubmit)="onSubmit()" [formGroup]="myForm">
-      
-        
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
       <!--id - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="idInput" #idInput [placeholder]="formMetaData.properties.id['x-ncg'].label" [formControl]="myForm.controls['id']" [(ngModel)]="item.id" type="number" /> </md-input-container> 
-          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="idErrorMsgs" *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--valEmailAddressPattern - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="valEmailAddressPatternInput" #valEmailAddressPatternInput [placeholder]="formMetaData.properties.valEmailAddressPattern['x-ncg'].label" [formControl]="myForm.controls['valEmailAddressPattern']" [(ngModel)]="item.valEmailAddressPattern" type="text" /> </md-input-container> 
-          <small id="valEmailAddressPatternErrorMsgs" *ngFor="let error of formMetaData.properties.valEmailAddressPattern['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="valEmailAddressPatternInput" #valEmailAddressPatternInput [placeholder]="formMetaData.properties.valEmailAddressPattern['x-ncg'].label" 
+             formControlName="valEmailAddressPattern" type="text" />
+          </mat-form-field>
+          <small id="valEmailAddressPatternErrorMsgs" *ngFor="let error of formMetaData.properties.valEmailAddressPattern['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--valMin0Max100Value - integer-->
         <div class="mb-1">
-           <md-input-container style="width: 100%"> <input mdInput id="valMin0Max100ValueInput" #valMin0Max100ValueInput [placeholder]="formMetaData.properties.valMin0Max100Value['x-ncg'].label" [formControl]="myForm.controls['valMin0Max100Value']" [(ngModel)]="item.valMin0Max100Value" type="number" /> </md-input-container> 
-          <small id="valMin0Max100ValueErrorMsgs" *ngFor="let error of formMetaData.properties.valMin0Max100Value['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <small id="valMin0Max100ValueErrorMsgs" *ngFor="let error of formMetaData.properties.valMin0Max100Value['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--valMin2Max8Length - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="valMin2Max8LengthInput" #valMin2Max8LengthInput [placeholder]="formMetaData.properties.valMin2Max8Length['x-ncg'].label" [formControl]="myForm.controls['valMin2Max8Length']" [(ngModel)]="item.valMin2Max8Length" type="text" /> </md-input-container> 
-          <small id="valMin2Max8LengthErrorMsgs" *ngFor="let error of formMetaData.properties.valMin2Max8Length['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="valMin2Max8LengthInput" #valMin2Max8LengthInput [placeholder]="formMetaData.properties.valMin2Max8Length['x-ncg'].label" 
+             formControlName="valMin2Max8Length" type="text" />
+          </mat-form-field>
+          <small id="valMin2Max8LengthErrorMsgs" *ngFor="let error of formMetaData.properties.valMin2Max8Length['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
         
       <!--valRequiredField - string-->
         <div class="mb-1">
-          <md-input-container style="width: 100%"> <input mdInput id="valRequiredFieldInput" #valRequiredFieldInput [placeholder]="formMetaData.properties.valRequiredField['x-ncg'].label" [formControl]="myForm.controls['valRequiredField']" [(ngModel)]="item.valRequiredField" type="text" /> </md-input-container> 
-          <small id="valRequiredFieldErrorMsgs" *ngFor="let error of formMetaData.properties.valRequiredField['x-ncg'].errors" class="md-text-warn">{{error.message}}</small>
+          <mat-form-field style="width: 100%"> 
+             <input matInput id="valRequiredFieldInput" #valRequiredFieldInput [placeholder]="formMetaData.properties.valRequiredField['x-ncg'].label" 
+             formControlName="valRequiredField" type="text" />
+          </mat-form-field>
+          <small id="valRequiredFieldErrorMsgs" *ngFor="let error of formMetaData.properties.valRequiredField['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
         </div>
-      
-      
+        
         <div class="mb-1">
-          <button md-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
-          <button md-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
-          <button md-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
-          <button md-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
-          <button md-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
+          <button mat-raised-button color="primary" id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
+          <button mat-raised-button color="primary" id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
+          <button mat-raised-button color="primary" id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
+          <button mat-raised-button color="primary" id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
+          <button mat-raised-button color="primary" id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
         </div>
       </form>
     </div>

@@ -15,7 +15,7 @@ import { DisplayDataTransformPipe } from './../common/pipes';
 
 // services
 import { LocalStorageService, RestoreService } from './../common/services';
-import { DataContext } from './../services/api/rest';
+import { DataContext } from './../services/api/rest/data-context.service';
 import { EntityService, ModalDialogService, BusyIndicatorService, NotifierService } from '../../core';
 
 @Component({
@@ -26,7 +26,7 @@ import { EntityService, ModalDialogService, BusyIndicatorService, NotifierServic
 export class UserListComponent extends BaseListComponent<User>  {
 
   public tenantList: any = null;
-  public keyName: string = 'id';
+  public keyName: 'id';
   public fieldFilterModel: any = null;
   public formMetaData: any = null;
   
@@ -76,8 +76,7 @@ export class UserListComponent extends BaseListComponent<User>  {
   protected populateComponentDataAsync() {
     this.populateTenantData();
   }
-    
-  // private methods populateTenantData
+  // private methods populateData
   private populateTenantData() {
    this.datacontextService.TenantApi
      .get()
@@ -87,5 +86,4 @@ export class UserListComponent extends BaseListComponent<User>  {
       },
       (error) => { this.errorMessage = <any>error; });
   }
-  
 }
