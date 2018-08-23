@@ -1,3 +1,7 @@
+
+import {fromEvent as observableFromEvent} from 'rxjs';
+
+import {distinctUntilChanged, debounceTime, map} from 'rxjs/operators';
 // angular
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
@@ -25,10 +29,10 @@ export class InputDebounceComponent implements OnInit {
   }
 
   private eventSubcribe() {
-    const eventStream = Observable.fromEvent(this.elementRef.nativeElement, 'keyup')
-      .map(() => this.inputValue)
-      .debounceTime(this.timeDelay)
-      .distinctUntilChanged();
+    const eventStream = observableFromEvent(this.elementRef.nativeElement, 'keyup').pipe(
+      map(() => this.inputValue),
+      debounceTime(this.timeDelay),
+      distinctUntilChanged(),);
 
     eventStream.subscribe(input => this.value.emit(input));
   }

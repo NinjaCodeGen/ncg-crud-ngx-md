@@ -16,7 +16,7 @@
         
       <!--someBoolean - boolean-->
         <div class="mb-1">
-          <mat-checkbox id="someBooleanInput" #someBooleanInput formControlName="someBoolean" name="someBoolean_checkbox" [align]="'end'">
+          <mat-checkbox id="someBooleanInput" #someBooleanInput formControlName="someBoolean" name="someBoolean_checkbox" [labelPosition]="'end'">
              {{formMetaData.properties.someBoolean['x-ncg'].label}}
           </mat-checkbox>
           <small id="someBooleanErrorMsgs" *ngFor="let error of formMetaData.properties.someBoolean['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>

@@ -30,7 +30,7 @@
         
       <!--isActive - boolean-->
         <div class="mb-1">
-          <mat-checkbox id="isActiveInput" #isActiveInput formControlName="isActive" name="isActive_checkbox" [align]="'end'">
+          <mat-checkbox id="isActiveInput" #isActiveInput formControlName="isActive" name="isActive_checkbox" [labelPosition]="'end'">
              {{formMetaData.properties.isActive['x-ncg'].label}}
           </mat-checkbox>
           <small id="isActiveErrorMsgs" *ngFor="let error of formMetaData.properties.isActive['x-ncg'].errors" class="mat-text-warn">{{error.message}}</small>
